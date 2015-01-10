@@ -1,5 +1,5 @@
 # SwiftKick
-Useful classes for use with the Swift programming language.  This project just started, so the logger is the only class right now.
+Some classes and functions for the Swift programming language.  This project just started, so the logger is the only thing right now.
 
 ## Simple to Use with CocoaPods
 Add the cocoapod for swiftkick with:
