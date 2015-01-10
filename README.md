@@ -17,9 +17,10 @@ Add log everywhere in your code:
  > log.debug("Properties are = \\(props)")
 
 Available log commands are:
-trace(string), debug(string), info(string), warn(string), error(string), fatal(string)
+trace, debug, info, warn, error, fatal
 
 Available verbosity values are defined as:
+
     public enum LoggerVerbosity
     {
         case DEFAULT
@@ -29,6 +30,7 @@ Available verbosity values are defined as:
     }
 
 Available level values are defined as:
+
     public enum LoggerLevel: Int
     {
         case ALL = 0
