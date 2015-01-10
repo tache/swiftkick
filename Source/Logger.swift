@@ -20,6 +20,7 @@ public class Logger
     
     public enum LoggerLevel: Int
     {
+        case ALL = 0
         case TRACE = 10
         case DEBUG = 20
         case INFO = 30
