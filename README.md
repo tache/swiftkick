@@ -14,12 +14,12 @@ Create a logger object with desired output level and verbosity:
  > let log = SwiftKick.Logger(level: Logger.LoggerLevel.TRACE, verbosity:Logger.LoggerVerbosity.DEFAULT)
 
 Add log everywhere in your code:
- > log.debug("Properties are = \(props)")
+ > log.debug("Properties are = \\(props)")
 
 Available log commands are:
-trace, debug, info, warn, error, fatal
+trace(string), debug(string), info(string), warn(string), error(string), fatal(string)
 
-Available log enums are defined as:
+Available verbosity values are defined as:
     public enum LoggerVerbosity
     {
         case DEFAULT
@@ -27,7 +27,8 @@ Available log enums are defined as:
         case VERBOSE
         case MINIMUM
     }
-    
+
+Available level values are defined as:
     public enum LoggerLevel: Int
     {
         case ALL = 0
