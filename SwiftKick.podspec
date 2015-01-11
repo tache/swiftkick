@@ -7,9 +7,10 @@ Pod::Spec.new do |s|
   s.social_media_url = 'http://about.me/jasondudash'
   s.authors = { 'Jason Dudash' => 'jason.dudash@gmail.com' }
   s.source = { :git => 'https://github.com/dudash/swiftkick.git', :tag => s.version }
-
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.9'
+  
+  s.ios.platform  = :ios, '8.0'
+  s.osx.platform  = :osx, '10.9'
+  s.requires_arc = true
 
   s.source_files = 'Source/*'
 end
