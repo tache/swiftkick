@@ -3,7 +3,7 @@
 import SwiftKick
 
 // Set a log level to restrict output, and a verbosity of the output
-let log = Logger(level: Logger.LoggerLevel.WARN, verbosity:Logger.LoggerVerbosity.DEFAULT)
+let log = SwiftKick.Logger(level: Logger.LoggerLevel.WARN, verbosity:Logger.LoggerVerbosity.DEFAULT)
 
 // print a lone at each logging level (some will get hidden based on logger initialization)
 log.trace("TESTING TRACE")

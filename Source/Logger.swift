@@ -55,11 +55,11 @@ public class Logger
     private func getPrefix(fx:String, file:String, ln:Int, col:Int) -> String
     {
         let url:NSURL? = NSURL(string:file)
-        if url != nil && verbosity_ == LoggerVerbosity.DEFAULT { return "[\(getTimestamp())] \(url!.lastPathComponent):\(ln) - " }
-        else if url != nil && verbosity_ == LoggerVerbosity.VERBOSE { return "[\(getTimestamp())] \(url!.lastPathComponent)/\(fx):\(ln) - " }
+        if url != nil && verbosity_ == LoggerVerbosity.DEFAULT { return "[\(getTimestamp())] \(url!.lastPathComponent!):\(ln) - " }
+        else if url != nil && verbosity_ == LoggerVerbosity.VERBOSE { return "[\(getTimestamp())] \(url!.lastPathComponent!)/\(fx):\(ln) - " }
         else if verbosity_ == LoggerVerbosity.MINIMUM {return "[\(getTimestamp())] " }
         else if verbosity_ == LoggerVerbosity.MAXIMUM { return "[\(getTimestamp())] \(file)/\(fx):\(ln),\(col) - " }
-        else if url != nil { return "[\(getTimestamp())] \(url!.lastPathComponent):\(ln) - " }
+        else if url != nil { return "[\(getTimestamp())] \(url!.lastPathComponent!):\(ln) - " }
         else { return "[\(getTimestamp())] UNKNOWN_FILE:\(ln) - " }
     }
     
