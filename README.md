@@ -47,8 +47,8 @@ Encode string for building a URL:
  > let url = myString.encodeForURL()
 
 Encode string as base64 string:
- > let url = myString.toBase64()
+ > let myBase64String = myString.toBase64()
 
 Decode string from base64 string:
- > let url = myBase64String.fromBase64()
+ > let myString = myBase64String.fromBase64()
 
