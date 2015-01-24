@@ -1,5 +1,5 @@
 # SwiftKick
-Some classes and functions for the Swift programming language.  This project just started, so the logger is the only thing right now.
+Some classes and functions for the Swift programming language.  This project just started, so ideas/needs are welcome and keep checking back for updates.
 
 ## Simple to Use with CocoaPods
 Add the cocoapod for swiftkick with:
