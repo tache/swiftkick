@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name = 'SwiftKick'
-  s.version = '0.0.1'
+  s.version = '0.1.0'
   s.license = 'MIT'
-  s.summary = 'Useful classes for use with the Swift programming language'
+  s.summary = 'Some classes and functions for kickstarting your Swift development project'
   s.homepage = 'https://github.com/dudash/swiftkick'
   s.social_media_url = 'http://about.me/jasondudash'
   s.authors = { 'Jason Dudash' => 'jason.dudash@gmail.com' }

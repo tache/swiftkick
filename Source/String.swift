@@ -1,7 +1,7 @@
 //
 //  String.swift
 //  SwiftKick
-//
+//  https://github.com/dudash/swiftkick
 //  Created by Jason on 1/24/15.
 //
 //    The MIT License (MIT)

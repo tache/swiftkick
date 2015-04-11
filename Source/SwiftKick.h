@@ -1,7 +1,7 @@
 //
 //  SwiftKick.h
 //  SwiftKick
-//
+//  https://github.com/dudash/swiftkick
 //  Created by Jason Dudash on 1/9/15.
 //  Copyright (c) 2015 Jason Dudash. All rights reserved.
 //

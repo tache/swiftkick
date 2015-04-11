@@ -1,7 +1,7 @@
 //
 //  Logger.swift
 //  SwiftKick
-//
+//  https://github.com/dudash/swiftkick
 //  Created by Jason Dudash on 9/28/14.
 //
 //    The MIT License (MIT)

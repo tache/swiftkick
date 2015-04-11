@@ -1,16 +1,19 @@
 # SwiftKick
-Some classes and functions for the Swift programming language.  This project just started, so ideas/needs are welcome and keep checking back for updates.
+Some classes and functions for the Swift programming language.  Ideas are welcome and keep checking back for updates.
 
 ## Simple to Use with CocoaPods
-Add the cocoapod for swiftkick with:
+Add the cocoapod for swiftkick to your Podfile with:
+> pod "SwiftKick"
+
+or to use the latest:
  > pod "SwiftKick", :git => 'https://github.com/dudash/swiftkick.git'
 
-Import the library into your xcode project:
+Import the library into your xcode project .swift files:
  > import SwiftKick
 
-## Classes
+## API Classes
 ### Logger
-Create a logger object with desired output level and verbosity:
+Create a logger object with desired output level and verbosity (recommend to do this in a Globals.swift file):
  > let log = SwiftKick.Logger(level: Logger.LoggerLevel.TRACE, verbosity:Logger.LoggerVerbosity.DEFAULT)
 
 Add log everywhere in your code:
@@ -42,7 +45,8 @@ Available level values are defined as:
         case FATAL = 60
     }
 
-### String (extension)
+## Swift Class Extensions
+### String
 Encode string for building a URL:
  > let url = myString.encodeForURL()
 

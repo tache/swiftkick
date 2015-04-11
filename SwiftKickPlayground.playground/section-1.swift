@@ -29,3 +29,4 @@ let someString = "This is a string I'd like like to encode"
 let b64String:String = someString.toBase64()!
 b64String.fromBase64()
 
+ 
