@@ -8,11 +8,14 @@
 
 import UIKit
 import XCTest
+import SwiftKick
 
 class SwiftKickTests: XCTestCase {
+    var log:Logger!
     
     override func setUp() {
         super.setUp()
+        log = SwiftKick.Logger(level: Logger.LoggerLevel.TRACE, verbosity:Logger.LoggerVerbosity.DEFAULT)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -22,7 +25,12 @@ class SwiftKickTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
+        log.trace("TESTING TRACE")
+        log.debug("TESTING DEBUG")
+        log.info("TESTING INFO")
+        log.warn("TESTING WARN")
+        log.error("TESTING ERROR")
+        log.fatal("TESTING FATAL")
         XCTAssert(true, "Pass")
     }
     
