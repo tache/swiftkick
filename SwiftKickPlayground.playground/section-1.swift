@@ -26,7 +26,7 @@ let myStringURL = myString.encodeForURL()
 
 // base64 encode a string
 let someString = "This is a string I'd like like to encode"
-let b64String:String = someString.toBase64()!
+let b64String:String = someString.toBase64()! as String
 b64String.fromBase64()
 
  

@@ -90,42 +90,41 @@ public class Logger
     public func trace(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
     {
         if level_.rawValue > LoggerLevel.TRACE.rawValue { return }
-        println("TRACE:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
+        print("TRACE:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
     }
     
     //-----------------------------------------------------------------------------------------------
     public func debug(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
     {
         if level_.rawValue > LoggerLevel.DEBUG.rawValue { return }
-        let stamp = getTimestamp();
-        println("DEBUG:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
+        print("DEBUG:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
     }
     
     //-----------------------------------------------------------------------------------------------
     public func info(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
     {
         if level_.rawValue > LoggerLevel.INFO.rawValue { return }
-        println("INFO:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
+        print("INFO:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
     }
     
     //-----------------------------------------------------------------------------------------------
     public func warn(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
     {
         if level_.rawValue > LoggerLevel.WARN.rawValue { return }
-        println("WARN:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
+        print("WARN:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
     }
     
     //-----------------------------------------------------------------------------------------------
     public func error(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
     {
         if level_.rawValue > LoggerLevel.ERROR.rawValue { return }
-        println("ERROR:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
+        print("ERROR:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
     }
     
     //-----------------------------------------------------------------------------------------------
     public func fatal(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
     {
         if level_.rawValue > LoggerLevel.FATAL.rawValue { return }
-        println("FATAL:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
+        print("FATAL:" + getPrefix(fx, file:file, ln:ln, col:col) + message)
     }
 }
