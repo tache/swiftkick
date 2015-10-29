@@ -1,21 +1,18 @@
 //
-//  SwiftKickTests.swift
-//  SwiftKickTests
+//  SwiftKickiOSDemoTests.swift
+//  SwiftKickiOSDemoTests
 //
-//  Created by Jason Dudash on 1/9/15.
-//  Copyright (c) 2015 Jason Dudash. All rights reserved.
+//  Created by Christopher Graham on 10/29/15.
+//  Copyright (c) 2015 Mondo Cool Studios. All rights reserved.
 //
 
 import UIKit
 import XCTest
-import SwiftKick
 
-class SwiftKickTests: XCTestCase {
-    var log:Logger!
+class SwiftKickiOSDemoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        log = SwiftKick.Logger(level: LoggerLevel.TRACE, verbosity:Logger.LoggerVerbosity.DEFAULT)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -25,12 +22,7 @@ class SwiftKickTests: XCTestCase {
     }
     
     func testExample() {
-        log.trace("TESTING TRACE")
-        log.debug("TESTING DEBUG")
-        log.info("TESTING INFO")
-        log.warn("TESTING WARN")
-        log.error("TESTING ERROR")
-        log.fatal("TESTING FATAL")
+        // This is an example of a functional test case.
         XCTAssert(true, "Pass")
     }
     
