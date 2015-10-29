@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E0CAE1040079A8A4F40705EE /* Pods_SwiftKickiOSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B532255ECBC1AF7BA9366F /* Pods_SwiftKickiOSDemo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E0CAE1040079A8A4F40705EE /* Pods_SwiftKickiOSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B532255ECBC1AF7BA9366F /* Pods_SwiftKickiOSDemo.framework */; };
 		F5BBA8FF1BE2878C002A2C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BBA8FE1BE2878C002A2C94 /* AppDelegate.swift */; };
 		F5BBA9011BE2878C002A2C94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BBA9001BE2878C002A2C94 /* ViewController.swift */; };
 		F5BBA9041BE2878C002A2C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BBA9021BE2878C002A2C94 /* Main.storyboard */; };
@@ -183,6 +183,7 @@
 		F5BBA8F11BE2878C002A2C94 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Mondo Cool Studios";
 				TargetAttributes = {

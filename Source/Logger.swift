@@ -6,8 +6,6 @@
 //
 //    The MIT License (MIT)
 //
-//    Copyright (c) 2015 Jason Dudash
-//
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
 //    in the Software without restriction, including without limitation the rights
@@ -27,6 +25,11 @@
 //    SOFTWARE.
 //
 
+//
+//  Refactored by Christopher Graham on 10/28/15.
+// --> merged with color support from here: https://github.com/honghaoz/Loggerithm
+//
+
 import Foundation
 
 public class Logger
@@ -43,87 +46,8 @@ public class Logger
     private var verbosity_ = LoggerVerbosity.DEFAULT
     private var stream_:String = "stdout"
 
-    /// output color log flag
-    public var coloredLogFlag = false
-    
-    //-----------------------------------------------------------------------------------------------
-
-    /// Color used for verbose message logging string.
-    public var verboseColor: Color? {
-        set {
-            LoggerColor.verboseColor = newValue
-        }
-        
-        get {
-            return LoggerColor.verboseColor
-        }
-    }
-    
-    /// Color used for trace message logging string.
-    public var traceColor: Color? {
-        set {
-            LoggerColor.traceColor = newValue
-        }
-        
-        get {
-            return LoggerColor.traceColor
-        }
-    }
-    
-    /// Color used for debug log string.
-    public var debugColor: Color? {
-        set {
-            LoggerColor.debugColor = newValue
-        }
-        
-        get {
-            return LoggerColor.debugColor
-        }
-    }
-    
-    /// Color used for info log string.
-    public var infoColor: Color? {
-        set {
-            LoggerColor.infoColor = newValue
-        }
-        
-        get {
-            return LoggerColor.infoColor
-        }
-    }
-    
-    /// Color used for warning log string.
-    public var warnColor: Color? {
-        set {
-            LoggerColor.warnColor = newValue
-        }
-        
-        get {
-            return LoggerColor.warnColor
-        }
-    }
-    
-    /// Color used for error log string.
-    public var errorColor: Color? {
-        set {
-            LoggerColor.errorColor = newValue
-        }
-        
-        get {
-            return LoggerColor.errorColor
-        }
-    }
-    
-    /// Color used for error log string.
-    public var fatalColor: Color? {
-        set {
-            LoggerColor.fatalColor = newValue
-        }
-        
-        get {
-            return LoggerColor.fatalColor
-        }
-    }
+    /// output color log flag (requires: XcodeColors)
+    public var colored_ = false
     
     //-----------------------------------------------------------------------------------------------
 
@@ -139,24 +63,17 @@ public class Logger
     //-----------------------------------------------------------------------------------------------
 
     public init() {}
-    public init(level:LoggerLevel=LoggerLevel.WARN, verbosity:LoggerVerbosity=LoggerVerbosity.DEFAULT, stream:String="stdout")
+    public init(level:LoggerLevel=LoggerLevel.WARN, verbosity:LoggerVerbosity=LoggerVerbosity.DEFAULT, stream:String="stdout", colored:Bool=false )
     {
         level_ = level
         verbosity_  = verbosity
         stream_ = stream
-        
-        // Check to see whether XcodeColors is installed and enabled
-        // useColorfulLog will be turned on when environment variable "XcodeColors" == "YES"
-        //        if let xcodeColorsEnabled = NSProcessInfo().environment["XcodeColors"] as! String? where xcodeColorsEnabled == "YES" {
-        //            coloredLogFlag = true
-        //        }
+        colored_ = colored
     }
     
     //-----------------------------------------------------------------------------------------------
 
-    public func setLogLevel(level:LoggerLevel) {
-        level_ = level
-    }
+    public func changeLogLevel(level:LoggerLevel) { level_ = level }
     
     //-----------------------------------------------------------------------------------------------
 
@@ -187,14 +104,15 @@ public class Logger
     
     //-----------------------------------------------------------------------------------------------
 
-    public func logIt(message:String, level:LoggerLevel, fx:String, file:String, ln:Int, col:Int) {
+    public func logIt(message:String, level:LoggerLevel, fx:String, file:String, ln:Int, col:Int)
+    {
         if level_.rawValue > level.rawValue { return }
-        let logString = "\(LoggerLevel.descriptionForLogLevel(level)):" + getPrefix(fx, file:file, ln:ln, col:col) + message
-        let outputString = coloredLogFlag ? LoggerColor.applyColorForLogString(logString, withLevel: level) : logString
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.LogFunction(format: outputString)
-        })
+        let logString = "\(LoggerLevel.toString(level)):" + getPrefix(fx, file:file, ln:ln, col:col) + message
+        let outputString = colored_ ? LoggerColor.applyColorForLogString(logString, withLevel: level) : logString
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in self.LogFunction(format: outputString)})
     }
+
+    //-----------------------------------------------------------------------------------------------
 
     public func verbose(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
     {
@@ -245,10 +163,9 @@ public class Logger
 
     //-----------------------------------------------------------------------------------------------
 
-    public func emptyLine() {
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.LogFunction(format: "\n")
-        })
+    public func emptyLine()
+    {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in self.LogFunction(format: "\n")})
     }
 
 }
