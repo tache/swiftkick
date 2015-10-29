@@ -15,7 +15,7 @@ class SwiftKickTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        log = SwiftKick.Logger(level: Logger.LoggerLevel.TRACE, verbosity:Logger.LoggerVerbosity.DEFAULT)
+        log = SwiftKick.Logger(level: LoggerLevel.TRACE, verbosity:Logger.LoggerVerbosity.DEFAULT)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
