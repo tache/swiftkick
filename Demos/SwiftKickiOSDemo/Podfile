@@ -1,0 +1,12 @@
+use_frameworks!
+platform :ios, '8.3'
+
+target 'SwiftKickiOSDemo' do
+  # Use the latest and greatest, pre-release versions 
+  pod 'SwiftKick', :path => '../../SwiftKick-Local.podspec'
+end
+
+# -------------------------------------------------
+
+# target 'SwiftKickTests' do
+# end

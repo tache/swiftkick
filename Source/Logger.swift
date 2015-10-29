@@ -154,7 +154,7 @@ public class Logger
     
     //-----------------------------------------------------------------------------------------------
 
-    func setLogLevel(level:LoggerLevel) {
+    public func setLogLevel(level:LoggerLevel) {
         level_ = level
     }
     
