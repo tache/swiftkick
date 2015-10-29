@@ -114,9 +114,9 @@ public class Logger
 
     //-----------------------------------------------------------------------------------------------
 
-    public func verbose(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
+    public func always(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
     {
-        logIt(message, level: LoggerLevel.VERBOSE, fx: fx, file: file, ln: ln, col: col)
+        logIt(message, level: LoggerLevel.ALWAYS, fx: fx, file: file, ln: ln, col: col)
     }
     
     //-----------------------------------------------------------------------------------------------

@@ -34,7 +34,7 @@
 import Foundation
 
 public enum LoggerLevel: Int {
-    case VERBOSE    = 0
+    case ALWAYS     = 0
     case TRACE      = 10
     case DEBUG      = 20
     case INFO       = 30
@@ -47,7 +47,7 @@ public enum LoggerLevel: Int {
     {
         switch logLevel
         {
-        case .VERBOSE:  return "VERBOSE"
+        case .ALWAYS:   return "ALL"
         case .TRACE:    return "TRACE"
         case .DEBUG:    return "DEBUG"
         case .INFO:     return "INFO"
@@ -56,12 +56,11 @@ public enum LoggerLevel: Int {
         case .FATAL:    return "FATAL"
         }
     }
-    
-    /// Defualt log level
+
     /// Be sure to set the "DEBUG" symbol.
     /// Set it in the "Swift Compiler - Custom Flags" section, "Other Swift Flags" line. Add "-D DEBUG" entry.
     #if DEBUG
-        static public let defaultLevel = LoggerLevel.VERBOSE
+        static public let defaultLevel = LoggerLevel.ALWAYS
     #else
         static public let defaultLevel = LoggerLevel.WARN
     #endif

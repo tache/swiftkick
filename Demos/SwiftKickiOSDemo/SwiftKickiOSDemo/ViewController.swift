@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         log.colored_ = false
         
-        log.verbose("Verbose message...\n")
+        log.always("Verbose message...\n")
         log.trace("Trace message...\n")
         log.debug("Debug message...\n")
         log.info("Info message...\n")
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         log.colored_ = true
         
-        log.verbose("Verbose message...\n")
+        log.always("Verbose message...\n")
         log.trace("Trace message...\n")
         log.debug("Debug message...\n")
         log.info("Info message...\n")
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
         log.emptyLine()
         
-        log.verbose("Verbose message...\n")
+        log.always("Verbose message...\n")
         log.trace("Trace message...\n")
         log.debug("Debug message...\n")
         log.info("Info message...\n")
@@ -48,9 +48,9 @@ class ViewController: UIViewController {
         
         log.emptyLine()
         
-        log.changeLogLevel(LoggerLevel.VERBOSE)
+        log.changeLogLevel(LoggerLevel.ALWAYS)
         
-        log.verbose("Verbose message...\n")
+        log.always("Verbose message...\n")
         log.trace("Trace message...\n")
         log.debug("Debug message...\n")
         log.info("Info message...\n")
@@ -61,8 +61,8 @@ class ViewController: UIViewController {
         log.emptyLine()
         
         log.changeLogLevel(LoggerLevel.WARN)
-        
-        log.verbose("Verbose message...\n")
+
+        log.always("Verbose message...\n")
         log.trace("Trace message...\n")
         log.debug("Debug message...\n")
         log.info("Info message...\n")

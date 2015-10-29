@@ -9,7 +9,7 @@
 import UIKit
 import SwiftKick
 
-let log = Logger(level: LoggerLevel.VERBOSE, verbosity:Logger.LoggerVerbosity.VERBOSE)
+let log = Logger(level: LoggerLevel.ALWAYS, verbosity:Logger.LoggerVerbosity.VERBOSE)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

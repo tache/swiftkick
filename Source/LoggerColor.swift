@@ -188,7 +188,7 @@ struct LoggerColor {
     */
     static private func rgbForLogLevel(level: LoggerLevel) -> ColorTuple {
         switch level {
-        case .VERBOSE: return verboseColorTuple
+        case .ALWAYS: return verboseColorTuple
         case .TRACE: return traceColorTuple
         case .DEBUG: return debugColorTuple
         case .INFO: return infoColorTuple
