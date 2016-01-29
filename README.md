@@ -69,8 +69,11 @@ Add the capability to tint an image with a UIColor
 ### UIView+Gradient
 Add the capability to create a linear gradient view from a set of colors similar to CSS.  [See here][2]
 > let view = UIView()
+
 > let colorStop1 = ColorWithStop(UIColor(fromHex:0x20202c),0)
+
 > let colorStop2 = ColorWithStop(UIColor(fromHex:0x515175),100)
+
 > view.addLinearGradientLayer(colorStop1, colorStop2)
 
 
