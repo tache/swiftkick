@@ -31,6 +31,10 @@
 // Reference to Swift Strings:
 // https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html
 
+#if SK_IGNORE_STRING
+    // ignoring
+#else
+    
 import Foundation
 
 extension String
@@ -57,3 +61,5 @@ extension String
         return NSString(data: base64data!, encoding: NSUTF8StringEncoding)
     }
 }
+
+#endif //#if SK_IGNORE_STRING

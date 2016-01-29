@@ -46,6 +46,8 @@ Available level values are defined as:
     }
 
 ## Swift Class Extensions
+You can turn any class extension off by defining a custom flag of the form SK_IGNORE_CLASSNAME.  [Read more about that here][1]
+
 ### String
 Encode string for building a URL:
  > let url = myString.encodeForURL()
@@ -55,4 +57,26 @@ Encode string as base64 string:
 
 Decode string from base64 string:
  > let myString = myBase64String.fromBase64()
+
+### UIColor+Hex
+Adds the capability to initialize from HEX values
+> let myColor = UIColor(fromHex:0x00000c)
+
+### UIImage+Tint
+Add the capability to tint an image with a UIColor
+> let tintedImage = myImage.tint(UIColor.blueColor(), blendMode: CGBlendMode.Normal)
+
+### UIView+Gradient
+Add the capability to create a linear gradient view from a set of colors similar to CSS.  [See here][2]
+> let view = UIView()
+> let colorStop1 = ColorWithStop(UIColor(fromHex:0x20202c),0)
+> let colorStop2 = ColorWithStop(UIColor(fromHex:0x515175),100)
+> view.addLinearGradientLayer(colorStop1, colorStop2)
+
+
+
+[1]: http://stackoverflow.com/questions/24111854/in-absence-of-preprocessor-macros-is-there-a-way-to-define-practical-scheme-spe/24112024#24112024
+[2]: http://www.w3schools.com/css/css3_gradients.asp
+
+
 
