@@ -114,49 +114,49 @@ public class Logger
 
     //-----------------------------------------------------------------------------------------------
 
-    public func verbose(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
+    public func verbose(message:String, fx:String=#function, file:String=#file, ln:Int=#line, col:Int=#column)
     {
         logIt(message, level: LoggerLevel.VERBOSE, fx: fx, file: file, ln: ln, col: col)
     }
     
     //-----------------------------------------------------------------------------------------------
 
-    public func trace(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
+    public func trace(message:String, fx:String=#function, file:String=#file, ln:Int=#line, col:Int=#column)
     {
         logIt(message, level: LoggerLevel.TRACE, fx: fx, file: file, ln: ln, col: col)
     }
     
     //-----------------------------------------------------------------------------------------------
 
-    public func debug(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
+    public func debug(message:String, fx:String=#function, file:String=#file, ln:Int=#line, col:Int=#column)
     {
         logIt(message, level: LoggerLevel.DEBUG, fx: fx, file: file, ln: ln, col: col)
     }
     
     //-----------------------------------------------------------------------------------------------
 
-    public func info(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
+    public func info(message:String, fx:String=#function, file:String=#file, ln:Int=#line, col:Int=#column)
     {
         logIt(message, level: LoggerLevel.INFO, fx: fx, file: file, ln: ln, col: col)
     }
     
     //-----------------------------------------------------------------------------------------------
 
-    public func warn(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
+    public func warn(message:String, fx:String=#function, file:String=#file, ln:Int=#line, col:Int=#column)
     {
         logIt(message, level: LoggerLevel.WARN, fx: fx, file: file, ln: ln, col: col)
     }
     
     //-----------------------------------------------------------------------------------------------
 
-    public func error(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
+    public func error(message:String, fx:String=#function, file:String=#file, ln:Int=#line, col:Int=#column)
     {
         logIt(message, level: LoggerLevel.ERROR, fx: fx, file: file, ln: ln, col: col)
     }
     
     //-----------------------------------------------------------------------------------------------
 
-    public func fatal(message:String, fx:String=__FUNCTION__, file:String=__FILE__, ln:Int=__LINE__, col:Int=__COLUMN__)
+    public func fatal(message:String, fx:String=#function, file:String=#file, ln:Int=#line, col:Int=#column)
     {
         logIt(message, level: LoggerLevel.FATAL, fx: fx, file: file, ln: ln, col: col)
     }
