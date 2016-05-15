@@ -116,6 +116,13 @@ public class Logger
 
     public func always(message:String, fx:String=#function, file:String=#file, ln:Int=#line, col:Int=#column)
     {
+        logIt(message, level: LoggerLevel.ALWAYS, fx: fx, file: file, ln: ln, col: col)   
+    }
+
+    //-----------------------------------------------------------------------------------------------
+    // keep this in for legacy support, but use of always is prefered
+    public func verbose(message:String, fx:String=#function, file:String=#file, ln:Int=#line, col:Int=#column)
+    {
         logIt(message, level: LoggerLevel.ALWAYS, fx: fx, file: file, ln: ln, col: col)
     }
     
