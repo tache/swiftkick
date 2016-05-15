@@ -15,6 +15,9 @@
 		D3AFBDE21CE924440036156E /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFBDDF1CE924440036156E /* UIView+Gradient.swift */; };
 		D3AFBDE31CE924440036156E /* UIImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFBDE01CE924440036156E /* UIImage+Tint.swift */; };
 		D3AFBDE41CE924440036156E /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFBDE11CE924440036156E /* UIColor+Hex.swift */; };
+		D3AFBDE61CE926160036156E /* README-devel.md in Sources */ = {isa = PBXBuildFile; fileRef = D3AFBDE51CE926160036156E /* README-devel.md */; };
+		D3AFBDE91CE926580036156E /* releasepod.sh in Resources */ = {isa = PBXBuildFile; fileRef = D3AFBDE71CE926580036156E /* releasepod.sh */; };
+		D3AFBDEA1CE926580036156E /* SwiftKick-Local.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D3AFBDE81CE926580036156E /* SwiftKick-Local.podspec */; };
 		D3C897C21A60843B00C84939 /* SwiftKick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C897B61A60843B00C84939 /* SwiftKick.framework */; };
 		D3C897C91A60843B00C84939 /* SwiftKickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C897C81A60843B00C84939 /* SwiftKickTests.swift */; };
 		D3C897E51A60DD7F00C84939 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C897E31A60DD7F00C84939 /* Logger.swift */; };
@@ -41,6 +44,9 @@
 		D3AFBDDF1CE924440036156E /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Gradient.swift"; path = "Source/UIView+Gradient.swift"; sourceTree = SOURCE_ROOT; };
 		D3AFBDE01CE924440036156E /* UIImage+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Tint.swift"; path = "Source/UIImage+Tint.swift"; sourceTree = SOURCE_ROOT; };
 		D3AFBDE11CE924440036156E /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Source/UIColor+Hex.swift"; sourceTree = SOURCE_ROOT; };
+		D3AFBDE51CE926160036156E /* README-devel.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "README-devel.md"; sourceTree = "<group>"; };
+		D3AFBDE71CE926580036156E /* releasepod.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = releasepod.sh; sourceTree = SOURCE_ROOT; };
+		D3AFBDE81CE926580036156E /* SwiftKick-Local.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SwiftKick-Local.podspec"; sourceTree = SOURCE_ROOT; };
 		D3C897B61A60843B00C84939 /* SwiftKick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftKick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C897C11A60843B00C84939 /* SwiftKickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftKickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C897C71A60843B00C84939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,8 +90,9 @@
 		D3C897AC1A60843B00C84939 = {
 			isa = PBXGroup;
 			children = (
-				6CCC318F1A7820D4001A0FF4 /* LICENSE */,
+				D3AFBDE51CE926160036156E /* README-devel.md */,
 				6CCC318D1A7820CD001A0FF4 /* README.md */,
+				6CCC318F1A7820D4001A0FF4 /* LICENSE */,
 				D3C897D21A60851000C84939 /* SwiftKickPlayground.playground */,
 				D3C897B81A60843B00C84939 /* SwiftKick */,
 				D3C897C51A60843B00C84939 /* SwiftKickTests */,
@@ -119,7 +126,9 @@
 		D3C897B91A60843B00C84939 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D3AFBDE71CE926580036156E /* releasepod.sh */,
 				6CCC318B1A782050001A0FF4 /* SwiftKick.podspec */,
+				D3AFBDE81CE926580036156E /* SwiftKick-Local.podspec */,
 				D3C897E11A60DD7300C84939 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -235,7 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AFBDE91CE926580036156E /* releasepod.sh in Resources */,
 				6CCC31901A7820D4001A0FF4 /* LICENSE in Resources */,
+				D3AFBDEA1CE926580036156E /* SwiftKick-Local.podspec in Resources */,
 				6CCC318C1A782050001A0FF4 /* SwiftKick.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +272,7 @@
 				6CB8346E1A73F5AE003FACA8 /* String.swift in Sources */,
 				D3AFBDE21CE924440036156E /* UIView+Gradient.swift in Sources */,
 				D3AFBDE31CE924440036156E /* UIImage+Tint.swift in Sources */,
+				D3AFBDE61CE926160036156E /* README-devel.md in Sources */,
 				D3C897E51A60DD7F00C84939 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
