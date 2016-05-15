@@ -20,7 +20,7 @@ Add log everywhere in your code:
  > log.debug("Properties are = \\(props)")
 
 Available log commands are:
-trace, debug, info, warn, error, fatal
+always, trace, debug, info, warn, error, fatal
 
 Available verbosity values are defined as:
 
