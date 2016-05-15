@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C2B91EE1C5ADF660040C477 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2B91ED1C5ADF660040C477 /* UIColor+Hex.swift */; };
-		6C2B91F01C5ADF830040C477 /* UIImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2B91EF1C5ADF830040C477 /* UIImage+Tint.swift */; };
-		6C2B91F21C5ADFBF0040C477 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2B91F11C5ADFBF0040C477 /* UIView+Gradient.swift */; };
-		6C2B91F51C5AE9CD0040C477 /* SwiftKick-Local.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6C2B91F41C5AE9CD0040C477 /* SwiftKick-Local.podspec */; };
 		6CB8346E1A73F5AE003FACA8 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8346D1A73F5AE003FACA8 /* String.swift */; };
 		6CCC318C1A782050001A0FF4 /* SwiftKick.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6CCC318B1A782050001A0FF4 /* SwiftKick.podspec */; };
 		6CCC318E1A7820CD001A0FF4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6CCC318D1A7820CD001A0FF4 /* README.md */; };
@@ -34,10 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C2B91ED1C5ADF660040C477 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Source/UIColor+Hex.swift"; sourceTree = SOURCE_ROOT; };
-		6C2B91EF1C5ADF830040C477 /* UIImage+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Tint.swift"; sourceTree = SOURCE_ROOT; };
-		6C2B91F11C5ADFBF0040C477 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = SOURCE_ROOT; };
-		6C2B91F41C5AE9CD0040C477 /* SwiftKick-Local.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SwiftKick-Local.podspec"; sourceTree = SOURCE_ROOT; };
 		6CB8346D1A73F5AE003FACA8 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = Source/String.swift; sourceTree = SOURCE_ROOT; };
 		6CCC318B1A782050001A0FF4 /* SwiftKick.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftKick.podspec; sourceTree = SOURCE_ROOT; };
 		6CCC318D1A7820CD001A0FF4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -73,25 +65,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6C2B91EC1C5ADE0A0040C477 /* UI Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				6C2B91ED1C5ADF660040C477 /* UIColor+Hex.swift */,
-				6C2B91EF1C5ADF830040C477 /* UIImage+Tint.swift */,
-				6C2B91F11C5ADFBF0040C477 /* UIView+Gradient.swift */,
-			);
-			name = "UI Extensions";
-			sourceTree = "<group>";
-		};
-		6C2B91F31C5AE1F10040C477 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				6CB8346D1A73F5AE003FACA8 /* String.swift */,
-				6C2B91EC1C5ADE0A0040C477 /* UI Extensions */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
 		D39BB02C1BE2B36B009B8DA2 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,8 +99,8 @@
 		D3C897B81A60843B00C84939 /* SwiftKick */ = {
 			isa = PBXGroup;
 			children = (
-				6C2B91F31C5AE1F10040C477 /* Extensions */,
 				D39BB02C1BE2B36B009B8DA2 /* Logger */,
+				6CB8346D1A73F5AE003FACA8 /* String.swift */,
 				D3C897E41A60DD7F00C84939 /* SwiftKick.h */,
 				D3C897B91A60843B00C84939 /* Supporting Files */,
 			);
@@ -138,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				6CCC318B1A782050001A0FF4 /* SwiftKick.podspec */,
-				6C2B91F41C5AE9CD0040C477 /* SwiftKick-Local.podspec */,
 				D3C897E11A60DD7300C84939 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -219,7 +191,7 @@
 			attributes = {
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Jason Dudash";
 				TargetAttributes = {
 					D3C897B51A60843B00C84939 = {
@@ -254,7 +226,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C2B91F51C5AE9CD0040C477 /* SwiftKick-Local.podspec in Resources */,
 				6CCC31901A7820D4001A0FF4 /* LICENSE in Resources */,
 				6CCC318C1A782050001A0FF4 /* SwiftKick.podspec in Resources */,
 			);
@@ -274,12 +245,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C2B91F01C5ADF830040C477 /* UIImage+Tint.swift in Sources */,
 				6CCC318E1A7820CD001A0FF4 /* README.md in Sources */,
-				6C2B91F21C5ADFBF0040C477 /* UIView+Gradient.swift in Sources */,
 				D39BB02E1BE2B37A009B8DA2 /* LoggerColor.swift in Sources */,
 				F5BBA8C11BE2811A002A2C94 /* LoggerLevel.swift in Sources */,
-				6C2B91EE1C5ADF660040C477 /* UIColor+Hex.swift in Sources */,
 				6CB8346E1A73F5AE003FACA8 /* String.swift in Sources */,
 				D3C897E51A60DD7F00C84939 /* Logger.swift in Sources */,
 			);
