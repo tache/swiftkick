@@ -34,6 +34,9 @@
 #if os(iOS)
     import UIKit
     public typealias Color = UIColor
+#elseif os(tvOS)
+    import UIKit
+    public typealias Color = UIColor
 #elseif os(OSX)
     import Cocoa
     public typealias Color = NSColor
