@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/dudash/swiftkick.png?label=ready&title=Ready)](https://waffle.io/dudash/swiftkick)
 # SwiftKick
 Some classes and functions for the Swift programming language.  Ideas are welcome and keep checking back for updates.
 
