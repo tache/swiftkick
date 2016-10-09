@@ -1,3 +1,4 @@
+/*
 // Playground - noun: a place where people can play
 // NOTE: Playgrounds won't work in Swift 2.3 and XCode8
 
@@ -31,3 +32,4 @@ let b64String:String = someString.toBase64()! as String
 b64String.fromBase64()
 
  
+*/
