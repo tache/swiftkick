@@ -16,7 +16,7 @@ extension UIImage {
             let halfWidth = self.size.width / 2
             let halfHeight = self.size.height / 2
             UIGraphicsBeginImageContext(CGSize(width: halfWidth, height: halfHeight))
-            self.drawInRect(CGRectMake(0, 0, halfWidth, halfHeight))
+            self.draw(in: CGRect(x: 0, y: 0, width: halfWidth, height: halfHeight))
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             return image
@@ -24,14 +24,14 @@ extension UIImage {
     
     //--------------------------------------------------------------------------
     
-    func tint(color: UIColor, blendMode: CGBlendMode) -> UIImage {
-        let drawRect = CGRectMake(0.0, 0.0, size.width, size.height)
+    func tint(_ color: UIColor, blendMode: CGBlendMode) -> UIImage {
+        let drawRect = CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         let context = UIGraphicsGetCurrentContext()
-        CGContextClipToMask(context!, drawRect, CGImage!)
+        context!.clip(to: drawRect, mask: cgImage!)
         color.setFill()
         UIRectFill(drawRect)
-        drawInRect(drawRect, blendMode: blendMode, alpha: 1.0)
+        draw(in: drawRect, blendMode: blendMode, alpha: 1.0)
         let tintedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return tintedImage!

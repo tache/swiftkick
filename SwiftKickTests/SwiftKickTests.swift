@@ -15,7 +15,7 @@ class SwiftKickTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        log = SwiftKick.Logger(level: LoggerLevel.TRACE, verbosity:Logger.LoggerVerbosity.DEFAULT)
+        log = SwiftKick.Logger(.trace, verbosity:.default)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -36,7 +36,7 @@ class SwiftKickTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measure() {
             // Put the code you want to measure the time of here.
         }
     }

@@ -43,22 +43,22 @@ extension String
     //-----------------------------------------------------------------------------------------------
     public func encodeForURL() -> String?
     {
-        return self.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
+        return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
     }
 
     //-----------------------------------------------------------------------------------------------
     public func toBase64() -> NSString?
     {
-        let utf8string = self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion:false)
-        return utf8string?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
+        let utf8string = self.data(using: String.Encoding.utf8, allowLossyConversion:false)
+        return utf8string?.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters) as NSString?
     }
     
     //-----------------------------------------------------------------------------------------------
     public func fromBase64() -> NSString?
     {
-        let base64data = NSData(base64EncodedString: self, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
+        let base64data = Data(base64Encoded: self, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
         if base64data == nil { return nil }
-        return NSString(data: base64data!, encoding: NSUTF8StringEncoding)
+        return NSString(data: base64data!, encoding: String.Encoding.utf8.rawValue)
     }
 }
 

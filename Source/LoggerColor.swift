@@ -43,11 +43,11 @@
 #endif
 
 struct LoggerColor {
-    static private let ESCAPE = "\u{001b}["
+    static fileprivate let ESCAPE = "\u{001b}["
     
-    static private let RESET_FG = ESCAPE + "fg;" // Clear any foreground color
-    static private let RESET_BG = ESCAPE + "bg;" // Clear any background color
-    static private let RESET = ESCAPE + ";"   // Clear any foreground or background color
+    static fileprivate let RESET_FG = ESCAPE + "fg;" // Clear any foreground color
+    static fileprivate let RESET_BG = ESCAPE + "bg;" // Clear any background color
+    static fileprivate let RESET = ESCAPE + ";"   // Clear any foreground or background color
     
     /// RGB Color components.
     typealias ColorTuple = (r: Int, g: Int, b: Int)
@@ -134,34 +134,34 @@ struct LoggerColor {
     //-----------------------------------------------------------------------------------------------
     
     /// Default color rgb components for verbose string.
-    static private var defaultVerboseColorTuple = ColorTuple(r: 190, g: 190, b: 190)
+    static fileprivate var defaultVerboseColorTuple = ColorTuple(r: 190, g: 190, b: 190)
     /// Default color rgb components for debug string.
-    static private var defaultTraceColorTuple = ColorTuple(r: 148, g: 187, b: 9)
+    static fileprivate var defaultTraceColorTuple = ColorTuple(r: 148, g: 187, b: 9)
     /// Default color rgb components for debug string.
-    static private var defaultDebugColorTuple = ColorTuple(r: 60, g: 161, b: 202)
+    static fileprivate var defaultDebugColorTuple = ColorTuple(r: 60, g: 161, b: 202)
     /// Default color rgb components for info string.
-    static private var defaultInfoColorTuple = ColorTuple(r: 253, g: 190, b: 10)
+    static fileprivate var defaultInfoColorTuple = ColorTuple(r: 253, g: 190, b: 10)
     /// Default color rgb components for warning string.
-    static private var defaultWarnColorTuple = ColorTuple(r: 251, g: 127, b: 8)
+    static fileprivate var defaultWarnColorTuple = ColorTuple(r: 251, g: 127, b: 8)
     /// Default color rgb components for error string.
-    static private var defaultErrorColorTuple = ColorTuple(r: 247, g: 13, b: 23)
+    static fileprivate var defaultErrorColorTuple = ColorTuple(r: 247, g: 13, b: 23)
     /// Default color rgb components for error string.
-    static private var defaultFatalColorTuple = ColorTuple(r: 220, g: 62, b: 53)
+    static fileprivate var defaultFatalColorTuple = ColorTuple(r: 220, g: 62, b: 53)
     
     /// Color rgb components for verbose string.
-    static private var verboseColorTuple = defaultVerboseColorTuple
+    static fileprivate var verboseColorTuple = defaultVerboseColorTuple
     /// Color rgb components for debug string.
-    static private var traceColorTuple = defaultTraceColorTuple
+    static fileprivate var traceColorTuple = defaultTraceColorTuple
     /// Color rgb components for debug string.
-    static private var debugColorTuple = defaultDebugColorTuple
+    static fileprivate var debugColorTuple = defaultDebugColorTuple
     /// Color rgb components for info string.
-    static private var infoColorTuple = defaultInfoColorTuple
+    static fileprivate var infoColorTuple = defaultInfoColorTuple
     /// Color rgb components for warning string.
-    static private var warnColorTuple = defaultWarnColorTuple
+    static fileprivate var warnColorTuple = defaultWarnColorTuple
     /// Color rgb components for error string.
-    static private var errorColorTuple = defaultErrorColorTuple
+    static fileprivate var errorColorTuple = defaultErrorColorTuple
     /// Color rgb components for error string.
-    static private var fatalColorTuple = defaultFatalColorTuple
+    static fileprivate var fatalColorTuple = defaultFatalColorTuple
     
     
     //-----------------------------------------------------------------------------------------------
@@ -174,7 +174,7 @@ struct LoggerColor {
     
     - returns: A string with color setting code inserted.
     */
-    static func applyColorForLogString(logString: String, withLevel level: LoggerLevel) -> String {
+    static func applyColorForLogString(_ logString: String, withLevel level: LoggerLevel) -> String {
         let (red, green, blue) = rgbForLogLevel(level)
         return "\(ESCAPE)fg\(red),\(green),\(blue);\(logString)\(RESET)"
     }
@@ -189,15 +189,15 @@ struct LoggerColor {
     
     - returns: ColorTuple instance.
     */
-    static private func rgbForLogLevel(level: LoggerLevel) -> ColorTuple {
+    static fileprivate func rgbForLogLevel(_ level: LoggerLevel) -> ColorTuple {
         switch level {
-        case .ALWAYS: return verboseColorTuple
-        case .TRACE: return traceColorTuple
-        case .DEBUG: return debugColorTuple
-        case .INFO: return infoColorTuple
-        case .WARN: return warnColorTuple
-        case .ERROR: return errorColorTuple
-        case .FATAL: return fatalColorTuple
+        case .always: return verboseColorTuple
+        case .trace: return traceColorTuple
+        case .debug: return debugColorTuple
+        case .info: return infoColorTuple
+        case .warn: return warnColorTuple
+        case .error: return errorColorTuple
+        case .fatal: return fatalColorTuple
         }
     }
     
@@ -211,7 +211,7 @@ struct LoggerColor {
     
     - returns: ColorTuple instance.
     */
-    static private func colorTupleForColor(color: Color) -> ColorTuple {
+    static fileprivate func colorTupleForColor(_ color: Color) -> ColorTuple {
         var red: CGFloat = 0.0
         var green: CGFloat = 0.0
         var blue: CGFloat = 0.0

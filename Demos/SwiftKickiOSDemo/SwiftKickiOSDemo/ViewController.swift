@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         
         log.emptyLine()
         
-        log.changeLogLevel(LoggerLevel.ALWAYS)
+        log.changeLogLevel(.always)
         
         log.always("Verbose message...\n")
         log.trace("Trace message...\n")
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         
         log.emptyLine()
         
-        log.changeLogLevel(LoggerLevel.WARN)
+        log.changeLogLevel(.warn)
 
         log.always("Verbose message...\n")
         log.trace("Trace message...\n")

@@ -1,4 +1,4 @@
-/*
+
 // Playground - noun: a place where people can play
 // NOTE: Playgrounds won't work in Swift 2.3 and XCode8
 
@@ -8,7 +8,7 @@ import SwiftKick
 // Logger
 //-----------------------------------------------------------------------------------------------
 // Set a log level to restrict output, and a verbosity of the output
-let log = SwiftKick.Logger(level: Logger.LoggerLevel.WARN, verbosity:Logger.LoggerVerbosity.DEFAULT)
+let log = SwiftKick.Logger(.warn, verbosity:.default)
 
 // print a lone at each logging level (some will get hidden based on logger initialization)
 log.trace("TESTING TRACE")
@@ -30,6 +30,3 @@ let myStringURL = myString.encodeForURL()
 let someString = "This is a string I'd like like to encode"
 let b64String:String = someString.toBase64()! as String
 b64String.fromBase64()
-
- 
-*/

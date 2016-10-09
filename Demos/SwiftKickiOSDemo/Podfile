@@ -1,5 +1,5 @@
 use_frameworks!
-platform :ios, '8.3'
+platform :ios, '9.3'
 
 target 'SwiftKickiOSDemo' do
   # Use the latest and greatest, pre-release versions 
@@ -10,12 +10,3 @@ end
 
 # target 'SwiftKickTests' do
 # end
-
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '2.3'
-            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '8.3'
-        end
-    end
-end
