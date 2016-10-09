@@ -34,39 +34,39 @@ extension UIView {
     var top:        CGFloat { return self.frame.origin.y }
     var bottom:     CGFloat { return self.frame.origin.y + self.frame.size.height }
     
-    func setWidth(width:CGFloat) { self.frame.size.width = width }
+    func setWidth(_ width:CGFloat) { self.frame.size.width = width }
     
-    func setHeight(height:CGFloat) { self.frame.size.height = height }
+    func setHeight(_ height:CGFloat) { self.frame.size.height = height }
     
-    func setSize(size:CGSize) { self.frame.size = size }
+    func setSize(_ size:CGSize) { self.frame.size = size }
     
-    func setOrigin(point:CGPoint) { self.frame.origin = point }
-    
-    //only change the origin x
-    func setX(x:CGFloat) { self.frame.origin = CGPointMake(x, self.frame.origin.y) }
+    func setOrigin(_ point:CGPoint) { self.frame.origin = point }
     
     //only change the origin x
-    func setY(y:CGFloat) { self.frame.origin = CGPointMake(self.frame.origin.x, y) }
+    func setX(_ x:CGFloat) { self.frame.origin = CGPoint(x: x, y: self.frame.origin.y) }
     
     //only change the origin x
-    func setCenterX(x:CGFloat) { self.center = CGPointMake(x, self.center.y) }
+    func setY(_ y:CGFloat) { self.frame.origin = CGPoint(x: self.frame.origin.x, y: y) }
     
     //only change the origin x
-    func setCenterY(y:CGFloat) { self.center = CGPointMake(self.center.x, y) }
+    func setCenterX(_ x:CGFloat) { self.center = CGPoint(x: x, y: self.center.y) }
     
-    func roundCorner(radius:CGFloat) { self.layer.cornerRadius = radius }
+    //only change the origin x
+    func setCenterY(_ y:CGFloat) { self.center = CGPoint(x: self.center.x, y: y) }
     
-    func setTop(top:CGFloat) { self.frame.origin.y = top }
+    func roundCorner(_ radius:CGFloat) { self.layer.cornerRadius = radius }
     
-    func setLeft(left:CGFloat) { self.frame.origin.x = left }
+    func setTop(_ top:CGFloat) { self.frame.origin.y = top }
     
-    func setRight(right:CGFloat) { self.frame.origin.x = right - self.frame.size.width }
+    func setLeft(_ left:CGFloat) { self.frame.origin.x = left }
     
-    func setBottom(bottom:CGFloat) { self.frame.origin.y = bottom - self.frame.size.height }
+    func setRight(_ right:CGFloat) { self.frame.origin.x = right - self.frame.size.width }
+    
+    func setBottom(_ bottom:CGFloat) { self.frame.origin.y = bottom - self.frame.size.height }
     
     //--------------------------------------------------------------------------
     
-    func addLinearGradientLayer(colors:ColorWithStop...) {
+    func addLinearGradientLayer(_ colors:ColorWithStop...) {
         let layer : CAGradientLayer = CAGradientLayer()
         layer.frame.size = self.frame.size
         layer.frame.origin = self.frame.origin
@@ -76,12 +76,13 @@ extension UIView {
         layer.colors = []
         
         for color in colors {
-            let thecolor:CGColor = color.0.CGColor
+            let thecolor:CGColor = color.0.cgColor
             layer.startPoint = CGPoint(x: 0, y: 0)
             layer.endPoint = CGPoint(x: 0, y: 1)
             if color.1 != nil {
                 if layer.locations == nil { layer.locations = [] }
-                layer.locations?.append(color.1!/100)
+                let number = NSNumber(integerLiteral: (color.1! / 100))
+                layer.locations?.append(number)
             }
             else {
                 // no color-stops, use start and end
@@ -97,9 +98,9 @@ extension UIView {
         fadeAnimation.duration = 1.0
         fadeAnimation.keyTimes = [0, 1]
         fadeAnimation.values = [0.0, 1.0]
-        fadeAnimation.removedOnCompletion = false
+        fadeAnimation.isRemovedOnCompletion = false
         fadeAnimation.fillMode = kCAFillModeForwards
-        layer.addAnimation(fadeAnimation, forKey:"animateOpacity")
+        layer.add(fadeAnimation, forKey:"animateOpacity")
         self.layer.addSublayer(layer)
         
         // Kludge: remove layers if more than a few, that way it looks seemless

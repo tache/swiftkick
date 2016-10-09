@@ -12,20 +12,28 @@ Import the library into your xcode project .swift files:
  > import SwiftKick
 
 ## Notes on XCode8
-With XCode8 backwards compatability can be a challenge.  SwiftKick now supports Swift 2.3 and Swift 3.0 and this will be in separate release versions.  Swift 2.3 will be maintained in the 0.x branches and Swift 3.0 will bump up the MAJOR number to 1.x.  2.3 and 3.0 don't mix. 
+With XCode8 backwards compatability can be a challenge.  SwiftKick now supports Swift 2.3 and Swift 3.0 and this will be in separate release versions.  Swift 2.3 will be maintained in the 0.x branches and Swift 3.0 will bump up the MAJOR number to 1.x.  Keep in mind that Swift 2.3 and Swift 3.0 pods don't mix. 
 
-To update your Podfile to use 2.3 you can use the following code:
+To use this pod with Swift 2.3 include with:
+
+     pod "SwiftKick", "~> 0.1.0"
+
+Also at the end of your Podfile add the following code:
 
      post_install do |installer|
        installer.pods_project.targets.each do |target|
          target.build_configurations.each do |config|
            config.build_settings['SWIFT_VERSION'] = '2.3'
-           config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.3'
         end
       end
     end
 
 Also, make sure to set the "Use Legacy Swift" flag in your project's build settings"
+
+
+To use this pod with Swift 3.0 include with:
+
+    pod "SwiftKick", "~> 1.0.0"
 
 
 ## API Classes

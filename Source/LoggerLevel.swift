@@ -34,26 +34,26 @@
 import Foundation
 
 public enum LoggerLevel: Int {
-    case ALWAYS     = 0
-    case TRACE      = 10
-    case DEBUG      = 20
-    case INFO       = 30
-    case WARN       = 40
-    case ERROR      = 50
-    case FATAL      = 60
+    case always     = 0
+    case trace      = 10
+    case debug      = 20
+    case info       = 30
+    case warn       = 40
+    case error      = 50
+    case fatal      = 60
     
     // Get string description for log level.
-    static public func toString(logLevel: LoggerLevel) -> String
+    static public func toString(_ logLevel: LoggerLevel) -> String
     {
         switch logLevel
         {
-        case .ALWAYS:   return "ALL"
-        case .TRACE:    return "TRACE"
-        case .DEBUG:    return "DEBUG"
-        case .INFO:     return "INFO"
-        case .WARN:     return "WARN"
-        case .ERROR:    return "ERROR"
-        case .FATAL:    return "FATAL"
+        case .always:   return "ALL"
+        case .trace:    return "TRACE"
+        case .debug:    return "DEBUG"
+        case .info:     return "INFO"
+        case .warn:     return "WARN"
+        case .error:    return "ERROR"
+        case .fatal:    return "FATAL"
         }
     }
 
@@ -62,7 +62,7 @@ public enum LoggerLevel: Int {
     #if DEBUG
         static public let defaultLevel = LoggerLevel.ALWAYS
     #else
-        static public let defaultLevel = LoggerLevel.WARN
+        static public let defaultLevel = LoggerLevel.warn
     #endif
 }
 
