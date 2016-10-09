@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.1'
   s.ios.deployment_target = '8.1' 
   # s.osx.deployment_target = '10.9'
-
+  
   s.requires_arc = true
   s.source_files = 'Source/*'
 end
