@@ -12,6 +12,12 @@
 		6CCC318E1A7820CD001A0FF4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6CCC318D1A7820CD001A0FF4 /* README.md */; };
 		6CCC31901A7820D4001A0FF4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6CCC318F1A7820D4001A0FF4 /* LICENSE */; };
 		D39BB02E1BE2B37A009B8DA2 /* LoggerColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BB02D1BE2B37A009B8DA2 /* LoggerColor.swift */; };
+		D3AFBDE21CE924440036156E /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFBDDF1CE924440036156E /* UIView+Gradient.swift */; };
+		D3AFBDE31CE924440036156E /* UIImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFBDE01CE924440036156E /* UIImage+Tint.swift */; };
+		D3AFBDE41CE924440036156E /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFBDE11CE924440036156E /* UIColor+Hex.swift */; };
+		D3AFBDE61CE926160036156E /* README-devel.md in Sources */ = {isa = PBXBuildFile; fileRef = D3AFBDE51CE926160036156E /* README-devel.md */; };
+		D3AFBDE91CE926580036156E /* releasepod.sh in Resources */ = {isa = PBXBuildFile; fileRef = D3AFBDE71CE926580036156E /* releasepod.sh */; };
+		D3AFBDEA1CE926580036156E /* SwiftKick-Local.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D3AFBDE81CE926580036156E /* SwiftKick-Local.podspec */; };
 		D3C897C21A60843B00C84939 /* SwiftKick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C897B61A60843B00C84939 /* SwiftKick.framework */; };
 		D3C897C91A60843B00C84939 /* SwiftKickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C897C81A60843B00C84939 /* SwiftKickTests.swift */; };
 		D3C897E51A60DD7F00C84939 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C897E31A60DD7F00C84939 /* Logger.swift */; };
@@ -35,6 +41,12 @@
 		6CCC318D1A7820CD001A0FF4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6CCC318F1A7820D4001A0FF4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D39BB02D1BE2B37A009B8DA2 /* LoggerColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggerColor.swift; path = Source/LoggerColor.swift; sourceTree = SOURCE_ROOT; };
+		D3AFBDDF1CE924440036156E /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Gradient.swift"; path = "Source/UIView+Gradient.swift"; sourceTree = SOURCE_ROOT; };
+		D3AFBDE01CE924440036156E /* UIImage+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Tint.swift"; path = "Source/UIImage+Tint.swift"; sourceTree = SOURCE_ROOT; };
+		D3AFBDE11CE924440036156E /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Source/UIColor+Hex.swift"; sourceTree = SOURCE_ROOT; };
+		D3AFBDE51CE926160036156E /* README-devel.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "README-devel.md"; sourceTree = "<group>"; };
+		D3AFBDE71CE926580036156E /* releasepod.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = releasepod.sh; sourceTree = SOURCE_ROOT; };
+		D3AFBDE81CE926580036156E /* SwiftKick-Local.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SwiftKick-Local.podspec"; sourceTree = SOURCE_ROOT; };
 		D3C897B61A60843B00C84939 /* SwiftKick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftKick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C897C11A60843B00C84939 /* SwiftKickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftKickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C897C71A60843B00C84939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,8 +90,9 @@
 		D3C897AC1A60843B00C84939 = {
 			isa = PBXGroup;
 			children = (
-				6CCC318F1A7820D4001A0FF4 /* LICENSE */,
+				D3AFBDE51CE926160036156E /* README-devel.md */,
 				6CCC318D1A7820CD001A0FF4 /* README.md */,
+				6CCC318F1A7820D4001A0FF4 /* LICENSE */,
 				D3C897D21A60851000C84939 /* SwiftKickPlayground.playground */,
 				D3C897B81A60843B00C84939 /* SwiftKick */,
 				D3C897C51A60843B00C84939 /* SwiftKickTests */,
@@ -101,6 +114,9 @@
 			children = (
 				D39BB02C1BE2B36B009B8DA2 /* Logger */,
 				6CB8346D1A73F5AE003FACA8 /* String.swift */,
+				D3AFBDE11CE924440036156E /* UIColor+Hex.swift */,
+				D3AFBDE01CE924440036156E /* UIImage+Tint.swift */,
+				D3AFBDDF1CE924440036156E /* UIView+Gradient.swift */,
 				D3C897E41A60DD7F00C84939 /* SwiftKick.h */,
 				D3C897B91A60843B00C84939 /* Supporting Files */,
 			);
@@ -110,7 +126,9 @@
 		D3C897B91A60843B00C84939 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D3AFBDE71CE926580036156E /* releasepod.sh */,
 				6CCC318B1A782050001A0FF4 /* SwiftKick.podspec */,
+				D3AFBDE81CE926580036156E /* SwiftKick-Local.podspec */,
 				D3C897E11A60DD7300C84939 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -191,15 +209,17 @@
 			attributes = {
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Jason Dudash";
 				TargetAttributes = {
 					D3C897B51A60843B00C84939 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 9DG3PF6Z4L;
+						LastSwiftMigration = 0800;
 					};
 					D3C897C01A60843B00C84939 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -226,7 +246,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AFBDE91CE926580036156E /* releasepod.sh in Resources */,
 				6CCC31901A7820D4001A0FF4 /* LICENSE in Resources */,
+				D3AFBDEA1CE926580036156E /* SwiftKick-Local.podspec in Resources */,
 				6CCC318C1A782050001A0FF4 /* SwiftKick.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,9 +268,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CCC318E1A7820CD001A0FF4 /* README.md in Sources */,
+				D3AFBDE41CE924440036156E /* UIColor+Hex.swift in Sources */,
 				D39BB02E1BE2B37A009B8DA2 /* LoggerColor.swift in Sources */,
 				F5BBA8C11BE2811A002A2C94 /* LoggerLevel.swift in Sources */,
 				6CB8346E1A73F5AE003FACA8 /* String.swift in Sources */,
+				D3AFBDE21CE924440036156E /* UIView+Gradient.swift in Sources */,
+				D3AFBDE31CE924440036156E /* UIImage+Tint.swift in Sources */,
+				D3AFBDE61CE926160036156E /* README-devel.md in Sources */,
 				D3C897E51A60DD7F00C84939 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,8 +311,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -297,6 +325,7 @@
 				EXCLUDED_SOURCE_FILE_NAMES = "*.md";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -333,8 +362,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -344,6 +375,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXCLUDED_SOURCE_FILE_NAMES = "*.md";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -353,6 +385,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -366,7 +399,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -380,6 +413,7 @@
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -389,7 +423,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -402,7 +436,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -421,6 +456,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.obscurebit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -435,6 +471,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.obscurebit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
