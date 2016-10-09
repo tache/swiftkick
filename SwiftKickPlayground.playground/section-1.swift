@@ -1,4 +1,5 @@
 // Playground - noun: a place where people can play
+// NOTE: Playgrounds won't work in Swift 2.3 and XCode8
 
 import SwiftKick
 
