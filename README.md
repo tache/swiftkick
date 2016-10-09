@@ -16,14 +16,14 @@ With XCode8 backwards compatability can be a challenge.  SwiftKick now supports 
 
 To update your Podfile to use 2.3 you can use the following code:
 
-   post_install do |installer|
-      installer.pods_project.targets.each do |target|
+     post_install do |installer|
+       installer.pods_project.targets.each do |target|
          target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '2.3'
-            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.3'
-         end
+           config.build_settings['SWIFT_VERSION'] = '2.3'
+           config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.3'
+        end
       end
-   end
+    end
 
 Also, make sure to set the "Use Legacy Swift" flag in your project's build settings"
 
