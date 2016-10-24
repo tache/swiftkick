@@ -55,8 +55,8 @@
 		D3C897E11A60DD7300C84939 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		D3C897E31A60DD7F00C84939 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Source/Logger.swift; sourceTree = SOURCE_ROOT; };
 		D3C897E41A60DD7F00C84939 /* SwiftKick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftKick.h; path = Source/SwiftKick.h; sourceTree = SOURCE_ROOT; };
-		F536CB3C1DBD67F900A2DC62 /* NumberTypeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTypeExtensions.swift; sourceTree = SOURCE_ROOT; };
-		F536CB3E1DBD681600A2DC62 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = SOURCE_ROOT; };
+		F536CB3C1DBD67F900A2DC62 /* NumberTypeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberTypeExtensions.swift; path = Source/NumberTypeExtensions.swift; sourceTree = SOURCE_ROOT; };
+		F536CB3E1DBD681600A2DC62 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtensions.swift; path = Source/UIColorExtensions.swift; sourceTree = SOURCE_ROOT; };
 		F5BBA8BF1BE2811A002A2C94 /* LoggerLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggerLevel.swift; path = Source/LoggerLevel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
