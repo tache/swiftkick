@@ -101,9 +101,16 @@ Decode string from base64 string:
 
 ### NumberTypeExtensions
 
-Adds the capability to initialize from HEX values
+Adds ease of access to number conversion 
 
-```let myColor = UIColor(fromHex:0x00000c)```
+Int accessors for `cgFloatValue`, `degreesToRadians`, `radiansToDegrees`
+
+Double accessors for `cgFloatValue`, `degreesToRadians`, `radiansToDegrees`
+
+CGFloat accessors for `floatValue`, `doubleValue`, `degreesToRadians`, `radiansToDegrees`
+
+Float accessors for cgFloatValue`, doubleValue`, `degreesToRadians`, `radiansToDegrees`
+   
 
 ### UIColorExtensions
 Get the CoreImage Color
