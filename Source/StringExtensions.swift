@@ -1,7 +1,8 @@
 //
-//  String.swift
+//  StringExtensions.swift
 //  SwiftKick
 //  https://github.com/dudash/swiftkick
+//
 //  Created by Jason on 1/24/15.
 //
 //    The MIT License (MIT)
@@ -31,9 +32,7 @@
 // Reference to Swift Strings:
 // https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html
 
-#if SK_IGNORE_STRING
-    // ignoring
-#else
+#if !(SK_IGNORE_STRING)
     
 import Foundation
 
