@@ -231,7 +231,7 @@
 			attributes = {
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Jason Dudash";
 				TargetAttributes = {
 					D3C897C01A60843B00C84939 = {
@@ -359,6 +359,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,7 +468,7 @@
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mondocoolstudios.SwiftKick-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.obscurebit.SwiftKick-tvOS";
 				PRODUCT_NAME = SwiftKick;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -499,7 +500,7 @@
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mondocoolstudios.SwiftKick-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.obscurebit.SwiftKick-tvOS";
 				PRODUCT_NAME = SwiftKick;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -528,7 +529,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mondocoolstudios.SwiftKick-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.obscurebit.SwiftKick-iOS";
 				PRODUCT_NAME = SwiftKick;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -556,7 +557,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mondocoolstudios.SwiftKick-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.obscurebit.SwiftKick-iOS";
 				PRODUCT_NAME = SwiftKick;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -592,6 +593,7 @@
 				F5EE23D31DBE5BAD00B22948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5EE23DF1DBE653400B22948 /* Build configuration list for PBXNativeTarget "SwiftKick iOS" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +602,7 @@
 				F5EE23E11DBE653400B22948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
