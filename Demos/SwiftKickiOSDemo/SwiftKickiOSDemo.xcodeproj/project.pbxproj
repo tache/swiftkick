@@ -185,7 +185,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Jason Dudash";
+				ORGANIZATIONNAME = "Mondo Cool Studios";
 				TargetAttributes = {
 					F5BBA8F81BE2878C002A2C94 = {
 						CreatedOnToolsVersion = 6.4;
@@ -195,6 +195,7 @@
 					F5BBA90D1BE2878C002A2C94 = {
 						CreatedOnToolsVersion = 6.4;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						TestTargetID = F5BBA8F81BE2878C002A2C94;
 					};
 				};
@@ -429,12 +430,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 799ABAB8A7EF6BC0803197EB /* Pods-SwiftKickiOSDemo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftKickiOSDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.obscurebit.SwiftKickiOSDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mondocoolstudios.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -444,12 +444,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A1050CD4A0CB38943C59857 /* Pods-SwiftKickiOSDemo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftKickiOSDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.obscurebit.SwiftKickiOSDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mondocoolstudios.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -459,7 +458,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -471,7 +469,7 @@
 				);
 				INFOPLIST_FILE = SwiftKickiOSDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.obscurebit.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mondocoolstudios.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftKickiOSDemo.app/SwiftKickiOSDemo";
@@ -482,7 +480,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -490,7 +487,7 @@
 				);
 				INFOPLIST_FILE = SwiftKickiOSDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.obscurebit.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mondocoolstudios.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftKickiOSDemo.app/SwiftKickiOSDemo";
