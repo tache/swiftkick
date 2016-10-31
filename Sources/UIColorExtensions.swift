@@ -3,8 +3,6 @@
 //  SwiftKick
 //  https://github.com/dudash/swiftkick
 //
-//  Created by Christopher Graham on 1/11/16.
-//
 //    The MIT License (MIT)
 //
 //    Copyright (c) 2015 Jason Dudash
@@ -29,7 +27,7 @@
 //
 
 #if !(SK_IGNORE_UICOLORHEX)
-    
+
 import UIKit
 
 extension UIColor {
@@ -37,9 +35,9 @@ extension UIColor {
     var coreImageColor: CoreImage.CIColor? {
         return CoreImage.CIColor(color: self)  // The resulting Core Image color, or nil
     }
-    
+
     //--------------------------------------------------------------------------
-    
+
     convenience init(fromHex: Int, alpha: CGFloat = 1.0) {
         let red = CGFloat((fromHex & 0xFF0000) >> 16) / 255.0
         let green = CGFloat((fromHex & 0xFF00) >> 8) / 255.0
@@ -48,7 +46,7 @@ extension UIColor {
     }
 
     //--------------------------------------------------------------------------
-    
+
     public func hexDescription(includeAlpha: Bool = false) -> String {
         if self.cgColor.numberOfComponents == 4 {
             let components = self.cgColor.components!
@@ -65,11 +63,11 @@ extension UIColor {
             return "Color not RGB."
         }
     }
-    
+
     //--------------------------------------------------------------------------
 
     // Flat UI colors from http://flatuicolors.com
-    
+
     // green sea
     class func turquoiseColor()    -> UIColor { return UIColor(fromHex:0x1abc9c, alpha: 1.0) }
     class func greenSeaColor()     -> UIColor { return UIColor(fromHex:0x16a085, alpha: 1.0) }
@@ -100,18 +98,18 @@ extension UIColor {
     // gray
     class func asbestosColor()     -> UIColor { return UIColor(fromHex:0x7f8c8d, alpha: 1.0) }
     class func concerteColor()     -> UIColor { return UIColor(fromHex:0x95a5a6, alpha: 1.0) }
-    
+
     //--------------------------------------------------------------------------
-    
+
     class func getRandomColor() -> UIColor {
         let randomRed:CGFloat = CGFloat(arc4random_uniform(255) + 1)
         let randomGreen:CGFloat = CGFloat(arc4random_uniform(255) + 1)
         let randomBlue:CGFloat = CGFloat(arc4random_uniform(255) + 1)
         return UIColor(red: randomRed/256, green: randomGreen/256, blue: randomBlue/256, alpha: 1.0)
     }
-    
+
     //--------------------------------------------------------------------------
-    
+
     func getHSBAComponents() -> (hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat)?
     {
         var (hue, saturation, brightness, alpha) = (CGFloat(0.0), CGFloat(0.0), CGFloat(0.0), CGFloat(0.0))
