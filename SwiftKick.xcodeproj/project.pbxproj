@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D302CC7B1DCFCEBC00A0D46A /* UserDefaults+FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302CC7A1DCFCEBC00A0D46A /* UserDefaults+FirstLaunch.swift */; };
 		D3C897C91A60843B00C84939 /* SwiftKickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C897C81A60843B00C84939 /* SwiftKickTests.swift */; };
 		F5EE23D41DBE5D1600B22948 /* SwiftKick.h in Headers */ = {isa = PBXBuildFile; fileRef = D3C897E41A60DD7F00C84939 /* SwiftKick.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5EE23E21DBE661200B22948 /* SwiftKick.h in Headers */ = {isa = PBXBuildFile; fileRef = D3C897E41A60DD7F00C84939 /* SwiftKick.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,6 +18,7 @@
 		6CCC318B1A782050001A0FF4 /* SwiftKick.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftKick.podspec; sourceTree = SOURCE_ROOT; };
 		6CCC318D1A7820CD001A0FF4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6CCC318F1A7820D4001A0FF4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D302CC7A1DCFCEBC00A0D46A /* UserDefaults+FirstLaunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserDefaults+FirstLaunch.swift"; path = "Sources/UserDefaults+FirstLaunch.swift"; sourceTree = SOURCE_ROOT; };
 		D39BB02D1BE2B37A009B8DA2 /* LoggerColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggerColor.swift; path = Sources/LoggerColor.swift; sourceTree = SOURCE_ROOT; };
 		D3AFBDDF1CE924440036156E /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Gradient.swift"; path = "Sources/UIView+Gradient.swift"; sourceTree = SOURCE_ROOT; };
 		D3AFBDE01CE924440036156E /* UIImage+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Tint.swift"; path = "Sources/UIImage+Tint.swift"; sourceTree = SOURCE_ROOT; };
@@ -144,6 +146,7 @@
 				F536CB3E1DBD681600A2DC62 /* UIColorExtensions.swift */,
 				D3AFBDE01CE924440036156E /* UIImage+Tint.swift */,
 				D3AFBDDF1CE924440036156E /* UIView+Gradient.swift */,
+				D302CC7A1DCFCEBC00A0D46A /* UserDefaults+FirstLaunch.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 					};
 					F5EE23D91DBE653400B22948 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -311,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D302CC7B1DCFCEBC00A0D46A /* UserDefaults+FirstLaunch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +520,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -534,6 +540,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -543,6 +550,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_IDENTITY = "";

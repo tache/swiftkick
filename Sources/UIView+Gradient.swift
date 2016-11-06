@@ -36,60 +36,60 @@
 import UIKit
 
 // a gradient making extension for any UIView
-typealias ColorWithStop = (UIColor, Int?)
+public typealias ColorWithStop = (UIColor, Int?)
 
 extension UIView {
     
     // From https://github.com/yingogobot/Swift-Useful-Extensions/blob/master/Swift-Useful-Extensions/UIView-ShortCuts.swift
     
-    var width:      CGFloat { return self.frame.size.width }
-    var height:     CGFloat { return self.frame.size.height }
-    var size:       CGSize  { return self.frame.size}
+    public var width:      CGFloat { return self.frame.size.width }
+    public var height:     CGFloat { return self.frame.size.height }
+    public var size:       CGSize  { return self.frame.size}
     
-    var origin:     CGPoint { return self.frame.origin }
-    var x:          CGFloat { return self.frame.origin.x }
-    var y:          CGFloat { return self.frame.origin.y }
-    var centerX:    CGFloat { return self.center.x }
-    var centerY:    CGFloat { return self.center.y }
+    public var origin:     CGPoint { return self.frame.origin }
+    public var x:          CGFloat { return self.frame.origin.x }
+    public var y:          CGFloat { return self.frame.origin.y }
+    public var centerX:    CGFloat { return self.center.x }
+    public var centerY:    CGFloat { return self.center.y }
     
-    var left:       CGFloat { return self.frame.origin.x }
-    var right:      CGFloat { return self.frame.origin.x + self.frame.size.width }
-    var top:        CGFloat { return self.frame.origin.y }
-    var bottom:     CGFloat { return self.frame.origin.y + self.frame.size.height }
+    public var left:       CGFloat { return self.frame.origin.x }
+    public var right:      CGFloat { return self.frame.origin.x + self.frame.size.width }
+    public var top:        CGFloat { return self.frame.origin.y }
+    public var bottom:     CGFloat { return self.frame.origin.y + self.frame.size.height }
     
-    func setWidth(_ width:CGFloat) { self.frame.size.width = width }
+    public func setWidth(_ width:CGFloat) { self.frame.size.width = width }
     
-    func setHeight(_ height:CGFloat) { self.frame.size.height = height }
+    public func setHeight(_ height:CGFloat) { self.frame.size.height = height }
     
-    func setSize(_ size:CGSize) { self.frame.size = size }
+    public func setSize(_ size:CGSize) { self.frame.size = size }
     
-    func setOrigin(_ point:CGPoint) { self.frame.origin = point }
-    
-    //only change the origin x
-    func setX(_ x:CGFloat) { self.frame.origin = CGPoint(x: x, y: self.frame.origin.y) }
+    public func setOrigin(_ point:CGPoint) { self.frame.origin = point }
     
     //only change the origin x
-    func setY(_ y:CGFloat) { self.frame.origin = CGPoint(x: self.frame.origin.x, y: y) }
+    public func setX(_ x:CGFloat) { self.frame.origin = CGPoint(x: x, y: self.frame.origin.y) }
     
     //only change the origin x
-    func setCenterX(_ x:CGFloat) { self.center = CGPoint(x: x, y: self.center.y) }
+    public func setY(_ y:CGFloat) { self.frame.origin = CGPoint(x: self.frame.origin.x, y: y) }
     
     //only change the origin x
-    func setCenterY(_ y:CGFloat) { self.center = CGPoint(x: self.center.x, y: y) }
+    public func setCenterX(_ x:CGFloat) { self.center = CGPoint(x: x, y: self.center.y) }
     
-    func roundCorner(_ radius:CGFloat) { self.layer.cornerRadius = radius }
+    //only change the origin x
+    public func setCenterY(_ y:CGFloat) { self.center = CGPoint(x: self.center.x, y: y) }
     
-    func setTop(_ top:CGFloat) { self.frame.origin.y = top }
+    public func roundCorner(_ radius:CGFloat) { self.layer.cornerRadius = radius }
     
-    func setLeft(_ left:CGFloat) { self.frame.origin.x = left }
+    public func setTop(_ top:CGFloat) { self.frame.origin.y = top }
     
-    func setRight(_ right:CGFloat) { self.frame.origin.x = right - self.frame.size.width }
+    public func setLeft(_ left:CGFloat) { self.frame.origin.x = left }
     
-    func setBottom(_ bottom:CGFloat) { self.frame.origin.y = bottom - self.frame.size.height }
+    public func setRight(_ right:CGFloat) { self.frame.origin.x = right - self.frame.size.width }
+    
+    public func setBottom(_ bottom:CGFloat) { self.frame.origin.y = bottom - self.frame.size.height }
     
     //--------------------------------------------------------------------------
     
-    func addLinearGradientLayer(_ colors:ColorWithStop...) {
+    public func addLinearGradientLayer(_ colors:ColorWithStop...) {
         let layer : CAGradientLayer = CAGradientLayer()
         layer.frame.size = self.frame.size
         layer.frame.origin = self.frame.origin

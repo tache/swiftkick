@@ -37,6 +37,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         log.colored_ = false
 
+        let first = UserDefaults.isFirstLaunch()
+        log.always("First launch = \(first)")
+        
         log.always("Verbose message...\n")
         log.trace("Trace message...\n")
         log.debug("Debug message...\n")

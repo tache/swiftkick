@@ -35,29 +35,29 @@ import UIKit
 import Foundation
 
 extension Int {
-    var cgFloatValue:       CGFloat { return CGFloat(self) }
-    var degreesToRadians:   Double  { return Double(self) * M_PI / 180 }
-    var radiansToDegrees:   Double  { return Double(self) * 180 / M_PI }
+    public var cgFloatValue:       CGFloat { return CGFloat(self) }
+    public var degreesToRadians:   Double  { return Double(self) * M_PI / 180 }
+    public var radiansToDegrees:   Double  { return Double(self) * 180 / M_PI }
 }
 
 extension Double {
-    var cgFloatValue:       CGFloat { return CGFloat(self) }
-    var degreesToRadians:   Double  { return self * M_PI / 180 }
-    var radiansToDegrees:   Double  { return self * 180 / M_PI }
+    public var cgFloatValue:       CGFloat { return CGFloat(self) }
+    public var degreesToRadians:   Double  { return self * M_PI / 180 }
+    public var radiansToDegrees:   Double  { return self * 180 / M_PI }
 }
 
 extension CGFloat {
-    var floatValue:         Float   { return Float(self) }
-    var doubleValue:        Double  { return Double(self) }
-    var degreesToRadians:   CGFloat { return CGFloat(doubleValue * M_PI / 180) }
-    var radiansToDegrees:   CGFloat { return CGFloat(doubleValue * 180 / M_PI) }
+    public var floatValue:         Float   { return Float(self) }
+    public var doubleValue:        Double  { return Double(self) }
+    public var degreesToRadians:   CGFloat { return CGFloat(doubleValue * M_PI / 180) }
+    public var radiansToDegrees:   CGFloat { return CGFloat(doubleValue * 180 / M_PI) }
 }
 
 extension Float  {
-    var cgFloatValue:       CGFloat { return CGFloat(self) }
-    var doubleValue:        Double  { return Double(self) }
-    var degreesToRadians:   Float   { return Float(doubleValue * M_PI / 180) }
-    var radiansToDegrees:   Float   { return Float(doubleValue * 180 / M_PI) }
+    public var cgFloatValue:       CGFloat { return CGFloat(self) }
+    public var doubleValue:        Double  { return Double(self) }
+    public var degreesToRadians:   Float   { return Float(doubleValue * M_PI / 180) }
+    public var radiansToDegrees:   Float   { return Float(doubleValue * 180 / M_PI) }
 }
 
 #endif // #if SK_IGNORE_NUMBEREXT

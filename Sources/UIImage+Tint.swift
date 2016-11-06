@@ -35,7 +35,7 @@
 
 import UIKit
 extension UIImage {
-    var halfSizeImage: UIImage? {
+    public var halfSizeImage: UIImage? {
             let halfWidth = self.size.width / 2
             let halfHeight = self.size.height / 2
             UIGraphicsBeginImageContext(CGSize(width: halfWidth, height: halfHeight))
@@ -47,7 +47,7 @@ extension UIImage {
     
     //--------------------------------------------------------------------------
     
-    func tint(_ color: UIColor, blendMode: CGBlendMode) -> UIImage {
+    public func tint(_ color: UIColor, blendMode: CGBlendMode) -> UIImage {
         let drawRect = CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         let context = UIGraphicsGetCurrentContext()
