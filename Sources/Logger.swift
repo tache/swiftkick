@@ -109,7 +109,7 @@ open class Logger
         if level_.rawValue > level.rawValue { return }
         let logString = "\(LoggerLevel.toString(level)):" + getPrefix(fx, file:file, ln:ln, col:col) + message
         let outputString = colored_ ? LoggerColor.applyColorForLogString(logString, withLevel: level) : logString
-        DispatchQueue.main.async(execute: { () -> Void in self.LogFunction(outputString)})
+        self.LogFunction(outputString)
     }
 
     //-----------------------------------------------------------------------------------------------
@@ -169,10 +169,23 @@ open class Logger
     }
 
     //-----------------------------------------------------------------------------------------------
+    // MARK: helpers
 
     open func emptyLine()
     {
-        DispatchQueue.main.async(execute: { () -> Void in self.LogFunction("\n")})
+        self.LogFunction("\n")
     }
-
+    
+    //-----------------------------------------------------------------------------------------------
+    
+    open func entered(fx:String=#function, file:String=#file, ln:Int=#line, col:Int=#column)
+    {
+        logIt("entered", level: LoggerLevel.trace, fx: fx, file: file, ln: ln, col: col)
+    }
+    //-----------------------------------------------------------------------------------------------
+    
+    open func returning(fx:String=#function, file:String=#file, ln:Int=#line, col:Int=#column)
+    {
+        logIt("returning", level: LoggerLevel.trace, fx: fx, file: file, ln: ln, col: col)
+    }
 }

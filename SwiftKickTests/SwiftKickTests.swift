@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Jason Dudash. All rights reserved.
 //
 
-import UIKit
 import XCTest
 import SwiftKick
 
@@ -40,5 +39,11 @@ class SwiftKickTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
+
+    func testEntryAndExitExample() {
+        log.entered()
+        // This is an example of using helper enter and exit methods.
+        log.returning()
+    }
+
 }
