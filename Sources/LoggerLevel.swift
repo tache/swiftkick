@@ -60,7 +60,7 @@ public enum LoggerLevel: Int {
     /// Be sure to set the "DEBUG" symbol.
     /// Set it in the "Swift Compiler - Custom Flags" section, "Other Swift Flags" line. Add "-D DEBUG" entry.
     #if DEBUG
-        static public let defaultLevel = LoggerLevel.ALWAYS
+        static public let defaultLevel = LoggerLevel.always
     #else
         static public let defaultLevel = LoggerLevel.warn
     #endif
