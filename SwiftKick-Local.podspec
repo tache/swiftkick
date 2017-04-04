@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'SwiftKick'
-  s.version = '1.0.2-development'
+  s.version = '1.0.3-development'
   s.license = { :type => "MIT" }
   s.summary = 'Some classes and functions for kickstarting your Swift development project'
   s.homepage = 'https://github.com/dudash/swiftkick'

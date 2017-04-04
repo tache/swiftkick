@@ -84,7 +84,41 @@ public enum LoggerLevel: Int
 ```
 
 ## Swift Class Extensions
-You can turn any class extension off by defining a custom flag of the form `SK_IGNORE_CLASSNAME`.  [Read more about that here][1]
+You can turn any class extension off by defining a custom flag of the form `SK_IGNORE_CLASSNAME`.  [Read more about that here][1].  List of thing to ignore is:
+* SK_IGNORE_NUMBEREXT
+* SK_IGNORE_STRING
+* SK_IGNORE_UICOLORHEX
+* SK_IGNORE_UIIMAGETINT
+* SK_IGNORE_UIVIEWGRADIENT
+* SK_IGNORE_USERDEFAULTSFIRSTLAUNCH
+
+### NumberTypeExtensions
+
+Adds ease of access to number conversion 
+Below are the list of extensions for each type:
+
+#### Int
+* `cgFloatValue`
+* `degreesToRadians`
+* `radiansToDegrees`
+
+#### Double
+* `cgFloatValue`
+* `degreesToRadians`
+* `radiansToDegrees`
+
+#### Float
+* `cgFloatValue`
+* `degreesToRadians`
+* `radiansToDegrees`
+* `doubleValue`
+
+#### CGFloat
+* `degreesToRadians`
+* `radiansToDegrees`
+* `doubleValue`
+* `floatValue`
+   
 
 ### StringExtensions
 Encode string for building a URL:
@@ -99,18 +133,6 @@ Decode string from base64 string:
 
 ```let myString = myBase64String.fromBase64()```
 
-### NumberTypeExtensions
-
-Adds ease of access to number conversion 
-
-Int accessors for `cgFloatValue`, `degreesToRadians`, `radiansToDegrees`
-
-Double accessors for `cgFloatValue`, `degreesToRadians`, `radiansToDegrees`
-
-CGFloat accessors for `floatValue`, `doubleValue`, `degreesToRadians`, `radiansToDegrees`
-
-Float accessors for cgFloatValue`, doubleValue`, `degreesToRadians`, `radiansToDegrees`
-   
 
 ### UIColorExtensions
 Get the CoreImage Color
@@ -149,6 +171,7 @@ Add the capability to tint an image with a UIColor
 
 ```let tintedImage = myImage.tint(UIColor.blueColor(), blendMode: CGBlendMode.Normal)```
 
+
 ### UIView+Gradient
 
 Add the capability to create a linear gradient view from a set of colors similar to CSS.  [See here][2]
@@ -160,6 +183,12 @@ Add the capability to create a linear gradient view from a set of colors similar
 ```let colorStop2 = ColorWithStop(UIColor(fromHex:0x515175),100)```
 
 ```view.addLinearGradientLayer(colorStop1, colorStop2)```
+
+
+### UserDefaults+FirstLaunch
+
+Check to see if this is the first launch of the app.  Stores a key in UserDefaults.
+
 
 [1]: http://stackoverflow.com/questions/24111854/in-absence-of-preprocessor-macros-is-there-a-way-to-define-practical-scheme-spe/24112024#24112024
 [2]: http://www.w3schools.com/css/css3_gradients.asp
