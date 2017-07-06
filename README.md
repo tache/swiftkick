@@ -136,24 +136,27 @@ Below are the list of extensions for each type:
 * `cgFloatValue`
 * `degreesToRadians`
 * `radiansToDegrees`
+* `random(min,max)`
 
 #### Double
 * `cgFloatValue`
 * `degreesToRadians`
 * `radiansToDegrees`
+* `random(min,max)`
 
 #### Float
 * `cgFloatValue`
 * `degreesToRadians`
 * `radiansToDegrees`
 * `doubleValue`
+* `random(min,max)`
 
 #### CGFloat
 * `degreesToRadians`
 * `radiansToDegrees`
 * `doubleValue`
 * `floatValue`
-   
+* `random(min,max)`   
 
 ### StringExtensions
 Encode string for building a URL:
