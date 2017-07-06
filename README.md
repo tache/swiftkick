@@ -44,6 +44,41 @@ To use this pod with Swift 3.0 include with:
 
 
 ## API Classes
+ 
+
+### Collections
+Additional classes related to collections.  Current list with examples is below.
+
+ #### Pair
+ ```
+ let pair = Pair(values:("C","D"))
+ var pairMap = Dictionary<Pair<String,String>,String>()
+ pairMap[pair] = "A"
+ ```
+ 
+ #### Matrix
+ ```
+ let grid:Matrix<Slot> = Matrix(rows: rows, columns: cols, elementCreator: Slot())
+ 
+ // top row && bottom row
+ for index in 0...cols-1 {
+ grid[0, index].edgeType = Slot.EdgeType.bottom_EDGE
+ grid[rows-1, index].edgeType = Slot.EdgeType.top_EDGE
+ }
+ 
+ // left edge && right edge
+ for index in 0...rows-1 {
+ grid[index, 0].edgeType = Slot.EdgeType.left_EDGE
+ grid[index, cols-1].edgeType = Slot.EdgeType.right_EDGE
+ }
+ 
+ // 4 corners
+ grid[0, 0].edgeType = Slot.EdgeType.bottom_LEFT_EDGE
+ grid[rows-1, 0].edgeType = Slot.EdgeType.top_LEFT_EDGE
+ grid[0, cols-1].edgeType = Slot.EdgeType.bottom_RIGHT_EDGE
+ grid[rows-1, cols-1].edgeType = Slot.EdgeType.top_RIGHT_EDGE
+ ```
+ 
 ### Logger
 Create a logger object with desired output level and verbosity (recommend to do this in a Globals.swift file):
 
