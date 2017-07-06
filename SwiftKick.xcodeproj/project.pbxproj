@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D302CC7B1DCFCEBC00A0D46A /* UserDefaults+FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302CC7A1DCFCEBC00A0D46A /* UserDefaults+FirstLaunch.swift */; };
+		D3858FC21F0EFB7400F05E1A /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3858FC11F0EFB7400F05E1A /* Matrix.swift */; };
+		D3858FC41F0EFBBF00F05E1A /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3858FC31F0EFBBF00F05E1A /* Pair.swift */; };
 		D3C897C91A60843B00C84939 /* SwiftKickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C897C81A60843B00C84939 /* SwiftKickTests.swift */; };
 		F5EE23D41DBE5D1600B22948 /* SwiftKick.h in Headers */ = {isa = PBXBuildFile; fileRef = D3C897E41A60DD7F00C84939 /* SwiftKick.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5EE23E21DBE661200B22948 /* SwiftKick.h in Headers */ = {isa = PBXBuildFile; fileRef = D3C897E41A60DD7F00C84939 /* SwiftKick.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,6 +21,8 @@
 		6CCC318D1A7820CD001A0FF4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6CCC318F1A7820D4001A0FF4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D302CC7A1DCFCEBC00A0D46A /* UserDefaults+FirstLaunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserDefaults+FirstLaunch.swift"; path = "Sources/UserDefaults+FirstLaunch.swift"; sourceTree = SOURCE_ROOT; };
+		D3858FC11F0EFB7400F05E1A /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matrix.swift; path = Sources/Matrix.swift; sourceTree = SOURCE_ROOT; };
+		D3858FC31F0EFBBF00F05E1A /* Pair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pair.swift; path = Sources/Pair.swift; sourceTree = SOURCE_ROOT; };
 		D39BB02D1BE2B37A009B8DA2 /* LoggerColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggerColor.swift; path = Sources/LoggerColor.swift; sourceTree = SOURCE_ROOT; };
 		D3AFBDDF1CE924440036156E /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Gradient.swift"; path = "Sources/UIView+Gradient.swift"; sourceTree = SOURCE_ROOT; };
 		D3AFBDE01CE924440036156E /* UIImage+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Tint.swift"; path = "Sources/UIImage+Tint.swift"; sourceTree = SOURCE_ROOT; };
@@ -65,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3858FC01F0EFB5900F05E1A /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				D3858FC31F0EFBBF00F05E1A /* Pair.swift */,
+				D3858FC11F0EFB7400F05E1A /* Matrix.swift */,
+			);
+			name = Collections;
+			sourceTree = "<group>";
+		};
 		D39BB02C1BE2B36B009B8DA2 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +114,8 @@
 		D3C897B81A60843B00C84939 /* SwiftKick */ = {
 			isa = PBXGroup;
 			children = (
-				F536CB3B1DBD67CD00A2DC62 /* Helpers */,
+				D3858FC01F0EFB5900F05E1A /* Collections */,
+				F536CB3B1DBD67CD00A2DC62 /* Extensions */,
 				D39BB02C1BE2B36B009B8DA2 /* Logger */,
 				D3C897E41A60DD7F00C84939 /* SwiftKick.h */,
 				D3C897B91A60843B00C84939 /* Supporting Files */,
@@ -138,7 +152,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F536CB3B1DBD67CD00A2DC62 /* Helpers */ = {
+		F536CB3B1DBD67CD00A2DC62 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				F536CB3C1DBD67F900A2DC62 /* NumberTypeExtensions.swift */,
@@ -148,7 +162,7 @@
 				D3AFBDDF1CE924440036156E /* UIView+Gradient.swift */,
 				D302CC7A1DCFCEBC00A0D46A /* UserDefaults+FirstLaunch.swift */,
 			);
-			name = Helpers;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +329,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3858FC21F0EFB7400F05E1A /* Matrix.swift in Sources */,
 				D302CC7B1DCFCEBC00A0D46A /* UserDefaults+FirstLaunch.swift in Sources */,
+				D3858FC41F0EFBBF00F05E1A /* Pair.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
