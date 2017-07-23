@@ -38,34 +38,6 @@ extension UIColor {
 
     //--------------------------------------------------------------------------
 
-    convenience init(fromHex: Int, alpha: CGFloat = 1.0) {
-        let red = CGFloat((fromHex & 0xFF0000) >> 16) / 255.0
-        let green = CGFloat((fromHex & 0xFF00) >> 8) / 255.0
-        let blue = CGFloat((fromHex & 0xFF)) / 255.0
-        self.init(red:red, green:green, blue:blue, alpha:alpha)
-    }
-
-    //--------------------------------------------------------------------------
-
-    public func hexDescription(includeAlpha: Bool = false) -> String {
-        if self.cgColor.numberOfComponents == 4 {
-            let components = self.cgColor.components!
-            let red = Float(components[0]) * 255.0
-            let green = Float(components[1]) * 255.0
-            let blue = Float(components[2]) * 255.0
-            let alpha = Float(components[3]) * 255.0
-            if (includeAlpha) {
-                return String.init(format: "%02x%02x%02x%02x", Int(red), Int(green), Int(blue), Int(alpha))
-            } else {
-                return String.init(format: "%02x%02x%02x", Int(red), Int(green), Int(blue))
-            }
-        } else {
-            return "Color not RGB."
-        }
-    }
-
-    //--------------------------------------------------------------------------
-
     // Flat UI colors from http://flatuicolors.com
 
     // green sea
@@ -98,15 +70,6 @@ extension UIColor {
     // gray
     public class func asbestosColor()     -> UIColor { return UIColor(fromHex:0x7f8c8d, alpha: 1.0) }
     public class func concerteColor()     -> UIColor { return UIColor(fromHex:0x95a5a6, alpha: 1.0) }
-
-    //--------------------------------------------------------------------------
-
-    public class func getRandomColor() -> UIColor {
-        let randomRed:CGFloat = CGFloat(arc4random_uniform(255) + 1)
-        let randomGreen:CGFloat = CGFloat(arc4random_uniform(255) + 1)
-        let randomBlue:CGFloat = CGFloat(arc4random_uniform(255) + 1)
-        return UIColor(red: randomRed/256, green: randomGreen/256, blue: randomBlue/256, alpha: 1.0)
-    }
 
     //--------------------------------------------------------------------------
 
