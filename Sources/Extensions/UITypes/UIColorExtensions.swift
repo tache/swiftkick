@@ -26,10 +26,9 @@
 //    SOFTWARE.
 //
 
-#if !(SK_IGNORE_UICOLORHEX)
-
 import UIKit
 
+#if !(SK_IGNORE_UICOLOR)
 extension UIColor {
 
     var coreImageColor: CoreImage.CIColor? {
@@ -124,5 +123,4 @@ extension UIColor {
     }
 
 }
-
-#endif // #if SK_IGNORE_UICOLORHEX
+#endif // #if SK_IGNORE_UICOLOR

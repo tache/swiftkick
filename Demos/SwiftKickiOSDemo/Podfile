@@ -4,6 +4,11 @@ platform :ios, '10.0'
 target 'SwiftKickiOSDemo' do
   # Use the latest and greatest, pre-release versions 
   pod 'SwiftKick', :path => '../../SwiftKick-Local.podspec'
+
+  # Try individually
+  #pod 'SwiftKick/Logger', :path => '../../SwiftKick-Local.podspec'
+  #pod 'SwiftKick/NumberExtensions', :path => '../../SwiftKick-Local.podspec'
+  #pod 'SwiftKick/PreferencesExtensions', :path => '../../SwiftKick-Local.podspec'
 end
 
 # -------------------------------------------------

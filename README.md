@@ -1,4 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/dudash/swiftkick.png?label=ready&title=Ready)](https://waffle.io/dudash/swiftkick)
+
 # SwiftKick
 Some classes and functions for the Swift programming language.  Ideas are welcome and keep checking back for updates.
 
@@ -16,36 +16,23 @@ Import the library into your xcode project .swift files:
 
 ```import SwiftKick```
 
-## Notes on Xcode 8
-With Xcode 8 backwards compatability can be a challenge.  SwiftKick now supports Swift 2.3 and Swift 3.0 and this will be in separate release versions.  Swift 2.3 will be maintained in the 0.x branches and Swift 3.0 will bump up the MAJOR number to 1.x.  Keep in mind that Swift 2.3 and Swift 3.0 pods don't mix.
+You can also individually include just parts of SwiftKick you want using the SwiftKick groups.  That would look like this:
 
-To use this pod with Swift 2.3 include with:
+```pod "SwiftKick/Logger"```
 
-```pod "SwiftKick", "~> 0.1.0"```
+The list of available groups are:
+* Collections -  The SwiftKick collection classes
+* Extensions - All the extensions
+* NumberExtensions - Just the number extensions
+* StringExtensions - Just the String extensions
+* UIExtensions - Just the UI extensions
+* PreferenceExtensions - Just the Foundation/Preferences extensions
+* Logger - The SwiftKick Logger classes
 
-Also at the end of your Podfile add the following code:
-
-```
-post_install do |installer|
-	installer.pods_project.targets.each do |target|
-		target.build_configurations.each do |config|
-			config.build_settings['SWIFT_VERSION'] = '2.3'
-        end
-	end
-end
-```
-
-Also, make sure to set the `Use Legacy Swift` flag in your project's build settings"
-
-
-To use this pod with Swift 3.0 include with:
-
-```pod "SwiftKick", "~> 1.0.0"```
-
+----
 
 ## API Classes
  
-
 ### Collections
 Additional classes related to collections.  Current list with examples is below.
 
@@ -119,15 +106,12 @@ public enum LoggerLevel: Int
 ```
 
 ## Swift Class Extensions
-You can turn any class extension off by defining a custom flag of the form `SK_IGNORE_CLASSNAME`.  [Read more about that here][1].  List of thing to ignore is:
-* SK_IGNORE_NUMBEREXT
-* SK_IGNORE_STRING
-* SK_IGNORE_UICOLORHEX
-* SK_IGNORE_UIIMAGETINT
-* SK_IGNORE_UIVIEWGRADIENT
-* SK_IGNORE_USERDEFAULTSFIRSTLAUNCH
+If you want to individually include just the extensions you want, you can do that because SwiftKick (including extensions) is divided into groups.
+e.g.  `pod 'SwiftKick/StringExtensions'`
 
-### NumberTypeExtensions
+You can also turn any class within an extension group off by defining a custom flag of the form `SK_IGNORE_CLASSNAME`.  [Read more about that here][1].
+
+### NumberExtensions
 
 Adds ease of access to number conversion 
 Below are the list of extensions for each type:
@@ -169,7 +153,8 @@ Decode string from base64 string:
 ```let myString = myBase64String.fromBase64()```
 
 
-### UIColorExtensions
+### UIExtensions
+#### UIColor
 Get the CoreImage Color
 
 ```let myColor = coreImageColor```
@@ -200,14 +185,14 @@ let myBrightness = myHBSA()?.brightness
 let myAlpha = myHBSA()?.alpha
 ```
 
-### UIImage+Tint
+#### UIImage+Tint
 
 Add the capability to tint an image with a UIColor
 
 ```let tintedImage = myImage.tint(UIColor.blueColor(), blendMode: CGBlendMode.Normal)```
 
 
-### UIView+Gradient
+#### UIView+Gradient
 
 Add the capability to create a linear gradient view from a set of colors similar to CSS.  [See here][2]
 
@@ -219,8 +204,8 @@ Add the capability to create a linear gradient view from a set of colors similar
 
 ```view.addLinearGradientLayer(colorStop1, colorStop2)```
 
-
-### UserDefaults+FirstLaunch
+### PreferencesExtensions
+#### UserDefaults+FirstLaunch
 
 Check to see if this is the first launch of the app.  Stores a key in UserDefaults.
 
@@ -230,3 +215,30 @@ Check to see if this is the first launch of the app.  Stores a key in UserDefaul
 
 
 
+-----
+
+## Notes on Xcode 8
+With Xcode 8 backwards compatability can be a challenge.  SwiftKick now supports Swift 2.3 and Swift 3.0 and this will be in separate release versions.  Swift 2.3 will be maintained in the 0.x branches and Swift 3.0 will bump up the MAJOR number to 1.x.  Keep in mind that Swift 2.3 and Swift 3.0 pods don't mix.
+
+To use this pod with Swift 2.3 include with:
+
+```pod "SwiftKick", "~> 0.1.0"```
+
+Also at the end of your Podfile add the following code:
+
+```
+post_install do |installer|
+	installer.pods_project.targets.each do |target|
+		target.build_configurations.each do |config|
+			config.build_settings['SWIFT_VERSION'] = '2.3'
+        end
+	end
+end
+```
+
+Also, make sure to set the `Use Legacy Swift` flag in your project's build settings"
+
+
+To use this pod with Swift 3.0 include with:
+
+```pod "SwiftKick", "~> 1.0.0"```
