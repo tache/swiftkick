@@ -28,6 +28,8 @@
 
 import UIKit
 
+#if !(SK_IGNORE_UICOLORHEX) //legacy
+
 #if !(SK_IGNORE_UICOLOR)
 extension UIColor {
 
@@ -124,3 +126,5 @@ extension UIColor {
 
 }
 #endif // #if SK_IGNORE_UICOLOR
+
+#endif // #if !(SK_IGNORE_UICOLORHEX)

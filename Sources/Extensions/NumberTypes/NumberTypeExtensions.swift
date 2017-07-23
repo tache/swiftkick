@@ -31,6 +31,7 @@
 
 import UIKit
 import Foundation
+#if !(SK_IGNORE_NUMBEREXT)  // legacy
 
 #if !(SK_IGNORE_INT)
 extension Int {
@@ -75,3 +76,5 @@ extension Float  {
     public static func random(min: Float, max: Float) -> Float { return Float.random * (max - min) + min }
 }
 #endif // #if SK_IGNORE
+
+#endif // #if SK_IGNORE WHOLE FILE

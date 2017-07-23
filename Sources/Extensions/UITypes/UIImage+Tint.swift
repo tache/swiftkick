@@ -28,7 +28,10 @@
 //    SOFTWARE.
 //
 
+#if !(SK_IGNORE_UIIMAGETINT) //legacy
+
 #if !(SK_IGNORE_UIIMAGE)
+
 import UIKit
 extension UIImage {
     public var halfSizeImage: UIImage? {
@@ -58,3 +61,5 @@ extension UIImage {
     
 }
 #endif //#if SK_IGNORE_UIIMAGE
+
+#endif //SK_IGNORE_UIIMAGETINT
