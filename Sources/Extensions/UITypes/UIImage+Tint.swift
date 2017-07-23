@@ -28,10 +28,9 @@
 //    SOFTWARE.
 //
 
+#if !(SK_IGNORE_UIIMAGETINT) //legacy
 
-#if SK_IGNORE_UIIMAGETINT
-    //ignoring
-#else
+#if !(SK_IGNORE_UIIMAGE)
 
 import UIKit
 extension UIImage {
@@ -61,5 +60,6 @@ extension UIImage {
     }
     
 }
-    
-#endif //#if SK_IGNORE_UIIMAGETINT
+#endif //#if SK_IGNORE_UIIMAGE
+
+#endif //SK_IGNORE_UIIMAGETINT

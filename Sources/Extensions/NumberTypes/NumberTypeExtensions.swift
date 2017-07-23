@@ -29,11 +29,11 @@
 //
 
 
-#if !(SK_IGNORE_NUMBEREXT)
-
 import UIKit
 import Foundation
+#if !(SK_IGNORE_NUMBEREXT)  // legacy
 
+#if !(SK_IGNORE_INT)
 extension Int {
     public var cgFloatValue:       CGFloat { return CGFloat(self) }
     public var degreesToRadians:   Double  { return Double(self) * .pi / 180 }
@@ -42,7 +42,9 @@ extension Int {
     public static func random(_ n: Int) -> Int { return Int(arc4random_uniform(UInt32(n))) }
     public static func random(_ min: Int, max: Int) -> Int { return Int.random(max - min + 1) + min }
 }
+#endif // #if SK_IGNORE
 
+#if !(SK_IGNORE_DOUBLE)
 extension Double {
     public var cgFloatValue:       CGFloat { return CGFloat(self) }
     public var degreesToRadians:   Double  { return self * .pi / 180 }
@@ -50,7 +52,9 @@ extension Double {
     public static var random:Double { get { return Double(arc4random()) / 0xFFFFFFFF } }
     public static func random(_ min: Double, max: Double) -> Double { return Double.random * (max - min) + min }
 }
+#endif // #if SK_IGNORE
 
+#if !(SK_IGNORE_CGFLOAT)
 extension CGFloat {
     public var floatValue:         Float   { return Float(self) }
     public var doubleValue:        Double  { return Double(self) }
@@ -60,7 +64,9 @@ extension CGFloat {
     public static var random:CGFloat { get { return CGFloat(Float.random) } }
     public static func random(_ min: CGFloat, max: CGFloat) -> CGFloat { return CGFloat.random * (max - min) + min }
 }
+#endif // #if SK_IGNORE
 
+#if !(SK_IGNORE_FLOAT)
 extension Float  {
     public var cgFloatValue:       CGFloat { return CGFloat(self) }
     public var doubleValue:        Double  { return Double(self) }
@@ -69,5 +75,6 @@ extension Float  {
     public static var random:Float { get { return Float(arc4random()) / 0xFFFFFFFF } }
     public static func random(min: Float, max: Float) -> Float { return Float.random * (max - min) + min }
 }
+#endif // #if SK_IGNORE
 
-#endif // #if SK_IGNORE_NUMBEREXT
+#endif // #if SK_IGNORE WHOLE FILE

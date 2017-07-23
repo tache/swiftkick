@@ -31,14 +31,12 @@
 
 // Reference to Swift Strings:
 // https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html
-
-#if !(SK_IGNORE_STRING)
     
 import Foundation
 
+#if !(SK_IGNORE_STRING)
 extension String
 {
-    
     //-----------------------------------------------------------------------------------------------
     public func encodeForURL() -> String?
     {
@@ -60,5 +58,4 @@ extension String
         return NSString(data: base64data!, encoding: String.Encoding.utf8.rawValue)
     }
 }
-
 #endif //#if SK_IGNORE_STRING

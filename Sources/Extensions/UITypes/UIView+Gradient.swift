@@ -29,9 +29,9 @@
 //
 
 
-#if SK_IGNORE_UIVIEWGRADIENT
-//ignoring
-#else
+#if !(SK_IGNORE_UIVIEWGRADIENT) // legacy
+
+#if !(SK_IGNORE_UIVIEW)
 
 import UIKit
 
@@ -137,4 +137,5 @@ extension UIView {
     }
 }
 
-#endif // #if SK_IGNORE_UIVIEWGRADIENT
+#endif // #if SK_IGNORE_UIVIEW
+#endif // SK_IGNORE_UIVIEWGRADIENT legacy
