@@ -19,4 +19,3 @@ open SwiftKick.xcodeproj
 
 printf "${GREEN}\nProject Updated!${COLOR_RESET}"
 printf "${BLUE}\n\n-------------------------------------------------------------\n\n${COLOR_RESET}"
-

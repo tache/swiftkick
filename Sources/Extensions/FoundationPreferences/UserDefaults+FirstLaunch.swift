@@ -6,7 +6,8 @@
 //  Copyright © 2016 Jason Dudash. All rights reserved.
 //
 
-#if !(SK_IGNORE_USERDEFAULTSFIRSTLAUNCH)
+#if !(SK_IGNORE_USERDEFAULTSFIRSTLAUNCH) //legacy
+#if !(SK_IGNORE_USERDEFAULTS)
     
 import Foundation
     
@@ -28,3 +29,4 @@ extension UserDefaults {
 }
 
 #endif
+#endif // #if !(SK_IGNORE_USERDEFAULTSFIRSTLAUNCH)

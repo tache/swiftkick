@@ -1,7 +1,5 @@
 #!/bin/sh
 
-#!/bin/sh
-
 # COMMAND LINE PARSING
 ################################################
 # REF: http://misc.flogisoft.com/bash/tip_colors_and_formatting
@@ -56,6 +54,8 @@ sleep 1
 /bin/rm -Rf Pods
 /bin/rm -Rf Podfile.lock
 /bin/rm -Rf SwiftKick.xcworkspace
+/bin/rm -rf ./DerivedData
+
 
 if [ "$opt_verbose" == true ]; then
 	echo "Clean up the custom attributes"
@@ -65,7 +65,7 @@ find ./ -name '*.DS_Store' -print -type f -delete
 if [ "$opt_verbose" == true ]; then
 	echo "Clean up the extended attributes"
 fi
-xattr -vcr ./SwiftKick Gemfile* *.xcodeproj Podfile* *.txt *.md *.sh
+xattr -vcr ./SwiftKickTests Gemfile* *.xcodeproj Podfile* *.txt *.md *.sh
 
 if [ "$opt_tags" == true ]; then
 	if [ "$opt_verbose" == true ]; then
