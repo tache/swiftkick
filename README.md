@@ -27,7 +27,7 @@ The list of available groups are:
 * StringExtensions - Just the String extensions
 * UIExtensions - Just the UI extensions
 * PreferenceExtensions - Just the Foundation/Preferences extensions
-* Logger - The SwiftKick Logger classes
+* Logger - The SwiftKick POWERFUL Logger classes 
 
 ----
 
